@@ -60,6 +60,61 @@ export const concerns = [
   },
 ] as const;
 
+/** Glanceable reasons — closer to the original five points, kept short for boxes. */
+export const highlights = [
+  {
+    id: "approval",
+    titleEn: "Stronger chance of approval",
+    titleJa: "許可の可能性がUP！",
+    bodyEn:
+      "Immigration pages list only the minimum. Specialist knowledge helps turn an acceptable filing into a stronger application—and a better chance of approval.",
+    bodyJa:
+      "入管の案内は必要最低限です。専門知識で、受理されるだけでなく許可につながりやすい申請を目指します。",
+    icon: "check" as const,
+  },
+  {
+    id: "time",
+    titleEn: "Your time stays with your work",
+    titleJa: "本業に集中",
+    bodyEn:
+      "Visa applications mean heavy paperwork and Immigration Bureau visits. As a registered application agent, we prepare and submit for you so your time stays with your business.",
+    bodyJa:
+      "申請には大量の書類と入管への提出が必要です。申請取次行政書士として、書類作成・提出を代行し、本業の時間を守ります。",
+    icon: "clock" as const,
+  },
+  {
+    id: "care",
+    titleEn: "Kind, careful support",
+    titleJa: "親切・丁寧なサポート",
+    bodyEn:
+      "We aim for an easy place to talk. We listen to each person’s story, explain in plain language, and support you courteously through to the end.",
+    bodyJa:
+      "相談しやすい雰囲気を大切に、お一人お一人のお話を伺い、わかりやすく丁寧に最後までサポートします。",
+    icon: "heart" as const,
+  },
+  {
+    id: "english",
+    titleEn: "English available",
+    titleJa: "英語対応OK！",
+    bodyEn:
+      "Foreign clients less confident in Japanese, and employers dealing with English documents, can rely on English support.",
+    bodyJa:
+      "日本語に不安のある外国人の方や、英語の書類でお困りの雇用主の方も、英語でご相談いただけます。",
+    icon: "chat" as const,
+  },
+  {
+    id: "network",
+    titleEn: "A wider professional network",
+    titleJa: "他士業との豊富なネットワーク",
+    bodyEn:
+      "Some matters need more than a gyoseishoshi alone. Through lawyers, judicial scriveners, tax accountants, and labor specialists, we offer one-stop support—including foreign employment questions.",
+    bodyJa:
+      "行政書士だけでは解決できないことも。弁護士・司法書士・税理士・社労士などと連携し、ワンストップでサポートします。",
+    icon: "nodes" as const,
+  },
+] as const;
+
+/** @deprecated Full five-point copy retained for JP detail later */
 export const points = [
   {
     n: "01",

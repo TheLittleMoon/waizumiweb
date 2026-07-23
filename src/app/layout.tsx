@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
-import { Figtree, Fraunces } from "next/font/google";
+import { Jost, Lora } from "next/font/google";
 import { Footer, Header } from "@/components/SiteChrome";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const figtree = Figtree({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-figtree",
+  variable: "--font-lora",
   display: "swap",
 });
 
-const fraunces = Fraunces({
+/** Geometric sans close to Futura when system Futura is unavailable */
+const jost = Jost({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-jost",
   display: "swap",
 });
 
@@ -36,11 +37,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${figtree.variable} ${fraunces.variable}`}>
-      <body className="min-h-screen font-sans antialiased">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+    <html lang="en" className={`${lora.variable} ${jost.variable}`}>
+      <body className="relative min-h-screen bg-paper font-sans antialiased">
+        <div aria-hidden className="paper-texture-bg" />
+        <div className="relative z-10">
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -1,19 +1,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #1c1618;
-  --color-ink-soft: #4a3f44;
-  --color-mute: #7a6c72;
-  --color-rose: #886078;
-  --color-rose-deep: #6e4c62;
-  --color-rose-soft: #c4a8b6;
-  --color-paper: #f7f3f4;
-  --color-paper-warm: #efe8ea;
-  --color-line: #e4d6dc;
-  --font-display: var(--font-fraunces), "Hiragino Mincho ProN", "Yu Mincho",
-    serif;
-  --font-sans: var(--font-figtree), "Hiragino Sans",
-    "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  --color-ink: #3f3438;
+  --color-ink-soft: #5c5056;
+  --color-mute: #8a7d83;
+  /* Off-rose trial (sampled dusty rose ~#ce9695) */
+  --color-rose: #ce9695;
+  --color-rose-deep: #b57675;
+  --color-rose-soft: #e4c4c3;
+  --color-paper: #ffffff;
+  --color-paper-warm: #f7efef;
+  --color-line: #ead9d8;
+  --font-logo: Futura, "Futura PT", "Century Gothic", var(--font-jost),
+    sans-serif;
+  --font-sans: var(--font-lora), "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-display: var(--font-logo);
 }
 
 @layer base {
@@ -22,7 +23,7 @@
   }
 
   body {
-    background: var(--color-paper);
+    background-color: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
@@ -31,6 +32,22 @@
   ::selection {
     background: color-mix(in oklab, var(--color-rose) 28%, white);
   }
+}
+
+.font-logo {
+  font-family: var(--font-logo);
+}
+
+/* Site-wide white paper texture */
+.paper-texture-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+  background-image: url("/texture/white-paper-texture_1194-2403.avif");
+  background-repeat: repeat;
+  background-size: 480px auto;
 }
 
 @keyframes rise {
