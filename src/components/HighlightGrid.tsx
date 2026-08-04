@@ -1,4 +1,5 @@
 import { highlights } from "@/content/site";
+import { pickLocalized, type Locale } from "@/lib/i18n";
 
 const icons = {
   check: (
@@ -38,7 +39,7 @@ const icons = {
   ),
 } as const;
 
-export function HighlightGrid() {
+export function HighlightGrid({ locale }: { locale: Locale }) {
   const main = highlights.slice(0, 3);
   const last = highlights.slice(3);
 
@@ -46,12 +47,12 @@ export function HighlightGrid() {
     <div>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {main.map((item) => (
-          <HighlightCard key={item.id} item={item} />
+          <HighlightCard key={item.id} item={item} locale={locale} />
         ))}
       </div>
       <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:mx-auto lg:max-w-[66.666%]">
         {last.map((item) => (
-          <HighlightCard key={item.id} item={item} />
+          <HighlightCard key={item.id} item={item} locale={locale} />
         ))}
       </div>
     </div>
@@ -60,8 +61,10 @@ export function HighlightGrid() {
 
 function HighlightCard({
   item,
+  locale,
 }: {
   item: (typeof highlights)[number];
+  locale: Locale;
 }) {
   return (
     <article className="flex h-full flex-col items-center rounded-2xl bg-rose/25 px-6 py-9 text-center ring-1 ring-rose/20">
@@ -78,9 +81,11 @@ function HighlightCard({
         </svg>
       </span>
       <h3 className="font-logo mt-5 text-sm tracking-[0.12em] text-ink uppercase">
-        {item.titleEn}
+        {pickLocalized(item, locale, "title")}
       </h3>
-      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.bodyEn}</p>
+      <p className="mt-3 text-sm leading-relaxed text-ink-soft">
+        {pickLocalized(item, locale, "body")}
+      </p>
     </article>
   );
 }

@@ -8,7 +8,7 @@ export const overseasAccounts: ServiceDetail = {
   blurbJa: "海外に銀行口座を持ちたい",
   blocks: [
     {
-      type: "lead",
+      type: "h2",
       text: "You want to open an overseas bank account, but…",
     },
     {
@@ -21,11 +21,11 @@ export const overseasAccounts: ServiceDetail = {
     },
     {
       type: "p",
-      text: "Please use the overseas account opening support of Administrative Scrivener Tomomi Waizumi Office.",
+      text: "Please use overseas account opening support from Waizumi Immigration Office.",
     },
     {
       type: "p",
-      text: "For clients who wish to open an overseas bank account, our office prepares documents often required at opening — passport certification, signature certification, address certification, and more — and provides Japanese translation of English application forms and similar documents.",
+      text: "For clients who wish to open an overseas bank account, our office prepares documents often required at opening (passport certification, signature certification, address certification, and more) and provides Japanese translation of English application forms and similar documents.",
     },
     {
       type: "p",
@@ -210,6 +210,221 @@ export const overseasAccounts: ServiceDetail = {
         "Passport certification — all pages: 8,000 yen",
         "Signature certification: 5,000 yen",
         "Address certification: 5,000 yen",
+      ],
+    },
+  ],
+  blocksJa: [
+    {
+      type: "h2",
+      text: "海外の銀行口座を開設したいけれど・・・",
+    },
+    {
+      type: "ul",
+      items: [
+        "英文の申込書がわからない",
+        "必要書類がわからない",
+        "パスポート認証・サイン認証・住所証明が必要と言われた",
+      ],
+    },
+    {
+      type: "p",
+      text: "行政書士わいずみともみ事務所の海外口座開設サポートをご利用ください",
+    },
+    {
+      type: "p",
+      text: "当事務所では海外の銀行口座の開設をご希望のお客様に対し、パスポート認証、サイン認証、住所証明等の開設時に必要となる書類の作成、英文の申込書等の日本語翻訳のサービスを承っております。",
+    },
+    {
+      type: "p",
+      text: "行政書士は「他人の依頼を受け報酬を得て、官公署に提出する書類その他権利義務又は事実証明に関する書類を作成することを業とする」ことが規定されています。",
+    },
+    {
+      type: "p",
+      text: "パスポート等の認証は「事実証明」に関する書類に該当するため、行政書士が作成することができます。",
+    },
+    {
+      type: "p",
+      text: "日本の法令においてパスポート認証を行える国家資格者は行政書士及び弁護士だけです。",
+    },
+
+    {
+      type: "h2",
+      text: "サポート内容",
+    },
+    {
+      type: "ul",
+      items: [
+        "パスポート認証",
+        "サイン認証",
+        "住所証明",
+        "口座開設申込書、公共料金の明細書等の翻訳（日本語→英語）（翻訳料は別途頂戴いたします）",
+        "認証書類に行政書士証票のコピー添付（英文）",
+        "公印確認、アポスティーユの取得が必要な場合のサポート",
+      ],
+    },
+    {
+      type: "note",
+      text: "海外口座の選択はご自身で行ってください。",
+    },
+
+    {
+      type: "h2",
+      text: "パスポート認証とは",
+    },
+    {
+      type: "p",
+      text: "海外の銀行口座を開設する際に、パスポートの認証を求められることがあります。",
+    },
+    {
+      type: "p",
+      text: "口座開設の際は本人確認が重要ですが、日本からの郵送での申込みでは銀行はパスポート原本の確認をすることができません。",
+    },
+    {
+      type: "p",
+      text: "そこで、有資格者により認証されたパスポートのコピーが必要になるのです。",
+    },
+    {
+      type: "p",
+      text: "パスポート認証とは、パスポートの所有者の本人確認を行った上で「パスポートのコピーが本物と同じものである」ということを第三者が証明することをいいます。",
+    },
+    {
+      type: "note",
+      text: "提出先によっては、様式・書式が決まっていることがあります。あらかじめ、ご自身で提出先にご確認ください。",
+    },
+    {
+      type: "note",
+      text: "初めに、必ず、「どこの」「どのような」認証が要求されているのかを確認してください。国家資格者(行政書士、弁護士)によるパスポート認証ではなく、領事認証、アポスティーユが要求されていることもあります。",
+    },
+    {
+      type: "note",
+      text: "パスポートのコピーについては、写真ページのみでよいのか、全ページ必要かをご確認の上お申込みください。",
+    },
+
+    {
+      type: "h2",
+      text: "サイン認証とは",
+    },
+    {
+      type: "p",
+      text: "サイン認証とは、口座開設申込書等の書類に付されたサインが、「確かに本人のものである」ということを、有資格者が証明し、書類に署名押印することです。こちらの書類も提出を求められることがあります。",
+    },
+    {
+      type: "note",
+      text: "提出先によっては、様式・書式（定型文）が決まっていることがあります。あらかじめ、ご自身で提出先にご確認ください。",
+    },
+    {
+      type: "note",
+      text: "口座開設の申込書へのサインの認証が必要な場合は、事前にサインをしないで当事務所にご持参ください。",
+    },
+
+    {
+      type: "h2",
+      text: "住所証明とは",
+    },
+    {
+      type: "p",
+      text: "銀行によっては、住所確認書類の提出を求めてくることがあります。",
+    },
+    {
+      type: "p",
+      text: "「本人が確かに口座開設申込書に記載した住所に住んでいる」ということを証明した書類を作成します。電話、電気、ガス、水道などの公共料金の請求書や明細書等の現在の住所が確認できる書類の英訳を添付し証明します。",
+    },
+
+    {
+      type: "h2",
+      text: "必要書類",
+    },
+    {
+      type: "h3",
+      text: "パスポート認証",
+    },
+    {
+      type: "ul",
+      items: [
+        "パスポートの原本",
+        "本人確認書類（運転免許証、住民基本台帳カードなどの公的証明書の原本）",
+        "指定の書式があればその書式",
+      ],
+    },
+    {
+      type: "h3",
+      text: "サイン認証",
+    },
+    {
+      type: "ul",
+      items: [
+        "パスポートの原本",
+        "本人確認書類（運転免許証、住民基本台帳カードなどの公的証明書の原本）",
+        "サインを必要とする口座開設申込書等の書類",
+        "指定の書式があればその書式",
+      ],
+    },
+    {
+      type: "h3",
+      text: "住所証明",
+    },
+    {
+      type: "ul",
+      items: [
+        "パスポートの原本",
+        "本人確認書類（運転免許証、住民基本台帳カードなどの公的証明書の原本）",
+        "電話、電気、ガス、水道の公共料金の請求書、明細書のいずれか",
+      ],
+    },
+
+    {
+      type: "h2",
+      text: "認証のお手続きの流れ",
+    },
+    {
+      type: "h3",
+      text: "STEP1 まずは電話、メール、お問合せフォームからご連絡ください",
+    },
+    {
+      type: "p",
+      text: "以下の事項をお知らせください。",
+    },
+    {
+      type: "ul",
+      items: [
+        "お名前、ご連絡先",
+        "必要なサイン認証の種類",
+        "定型書式等の有無",
+        "ご予約希望の日時",
+      ],
+    },
+    {
+      type: "p",
+      text: "事前にパスポートのコピー等の書類をFAX、PDF、郵送にてお送りいただければ当日は素早く認証書類をお渡しすることができます。",
+    },
+    {
+      type: "h3",
+      text: "STEP2 ご来所",
+    },
+    {
+      type: "p",
+      text: "必ずご本人様がいらしてください。",
+    },
+    {
+      type: "h3",
+      text: "STEP3 認証、料金のお支払い",
+    },
+    {
+      type: "p",
+      text: "ご本人確認後、認証書類を作成し、その場でお渡しします。",
+    },
+
+    {
+      type: "h2",
+      text: "料金",
+    },
+    {
+      type: "ul",
+      items: [
+        "パスポート認証　顔写真ページのみ 5,000円",
+        "パスポート認証　全ページ 8,000円",
+        "サイン認証 5,000円",
+        "住所証明 5,000円",
       ],
     },
   ],

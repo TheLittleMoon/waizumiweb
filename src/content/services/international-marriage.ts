@@ -9,7 +9,7 @@ export const internationalMarriage: ServiceDetail = {
   blocks: [
     {
       type: "lead",
-      text: "If you are marrying internationally — the Spouse of Japanese National visa.",
+      text: "If you are marrying internationally: the Spouse of Japanese National visa.",
     },
 
     {
@@ -76,6 +76,70 @@ export const internationalMarriage: ServiceDetail = {
     {
       type: "p",
       text: "If any of these apply, please consult our office.",
+    },
+  ],
+  blocksJa: [
+    {
+      type: "lead",
+      text: "国際結婚するなら日本人の配偶者ビザ",
+    },
+
+    {
+      type: "h2",
+      text: "日本人の配偶者ビザとは",
+    },
+    {
+      type: "p",
+      text: "正式には「日本人の配偶者等」の在留資格のことを言います。",
+    },
+    {
+      type: "p",
+      text: "このビザを取得すると、日本で行うことができる活動に制限がなくなります。",
+    },
+    {
+      type: "p",
+      text: "この在留資格を申請できるのは、次の①から③のいずれかに該当する人です。",
+    },
+    {
+      type: "ol",
+      items: ["日本人と結婚した外国人", "日本人の特別養子", "日本人の子"],
+    },
+
+    {
+      type: "h2",
+      text: "配偶者ビザのポイント",
+    },
+    {
+      type: "p",
+      text: "偽装結婚が増加したことにより、出入国在留管理局の審査は厳しくなっています。",
+    },
+    {
+      type: "p",
+      text: "配偶者ビザは、ふたりの結婚が偽装結婚ではなく、正真正銘の結婚である、と書類できちんと立証することがポイントとなります。",
+    },
+    {
+      type: "p",
+      text: "実際に交際していたことがわかる証拠となるもの、例えば、写真、メール、LINEの記録、電話やSkypeの通話記録、手紙等を残しておけば、申請のときに証拠として使うことができます。",
+    },
+    {
+      type: "p",
+      text: "このようなカップルは、不許可の可能性があります。一度ご相談ください。",
+    },
+    {
+      type: "ol",
+      items: [
+        "交際期間が短い",
+        "夫婦の年齢差が大きい",
+        "出会い系サイトや結婚紹介所で知り合った場合",
+        "日本人配偶者側に外国人との離婚歴あるいは外国人側に日本人との離婚歴がある場合",
+        "外国人配偶者が婚姻後もホステス等の水商売を続ける場合",
+        "お互いの国の言語をあまり理解できない場合",
+        "偽装結婚の多い国の人との結婚の場合",
+        "日本人の配偶者側の収入が低い場合（または無職、求職中）。",
+        "交際の証拠となる写真が少ない場合",
+        "結婚式を行っていない場合",
+        "結婚後、同居できない場合",
+      ],
     },
   ],
 };

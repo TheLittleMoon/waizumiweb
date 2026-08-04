@@ -1,20 +1,33 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { CtaBand, SectionHeading } from "@/components/SiteChrome";
+import { t } from "@/content/ui";
 import { processSteps } from "@/content/site";
+import { isLocale, pickLocalized, type Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "Process",
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function ProcessPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
+  return { title: t(raw, "processEyebrow") };
+}
+
+export default async function ProcessPage({ params }: Props) {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
+  const locale: Locale = raw;
+
   return (
     <>
       <section className="border-b border-line bg-gradient-to-b from-paper-warm to-paper px-5 pb-16 pt-32 md:px-8">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="各種手続きの流れ · Process"
-            title="How we work together"
-            body="Nine clear steps—from first inquiry to delivery of your residence card."
+            eyebrow={t(locale, "processEyebrow")}
+            title={t(locale, "processTitle")}
+            body={t(locale, "processBody")}
           />
         </div>
       </section>
@@ -31,11 +44,10 @@ export default function ProcessPage() {
               </span>
               <div>
                 <h2 className="font-display text-2xl text-ink">
-                  {step.titleEn}
+                  {pickLocalized(step, locale, "title")}
                 </h2>
-                <p className="mt-1 text-sm text-mute">{step.titleJa}</p>
                 <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft md:text-base">
-                  {step.bodyEn}
+                  {pickLocalized(step, locale, "body")}
                 </p>
               </div>
             </li>
@@ -43,7 +55,7 @@ export default function ProcessPage() {
         </ol>
       </section>
 
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }

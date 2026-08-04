@@ -4,13 +4,13 @@
   --color-ink: #3f3438;
   --color-ink-soft: #5c5056;
   --color-mute: #8a7d83;
-  /* Off-rose trial (sampled dusty rose ~#ce9695) */
-  --color-rose: #ce9695;
-  --color-rose-deep: #b57675;
-  --color-rose-soft: #e4c4c3;
+  /* Brand mauve from final logo */
+  --color-rose: #a47c93;
+  --color-rose-deep: #8a6478;
+  --color-rose-soft: #d4bfcb;
   --color-paper: #ffffff;
-  --color-paper-warm: #f7efef;
-  --color-line: #ead9d8;
+  --color-paper-warm: #f7f2f5;
+  --color-line: #e8dce3;
   --font-logo: Futura, "Futura PT", "Century Gothic", var(--font-jost),
     sans-serif;
   --font-sans: var(--font-lora), "Hiragino Mincho ProN", "Yu Mincho", serif;
@@ -38,16 +38,16 @@
   font-family: var(--font-logo);
 }
 
-/* Site-wide white paper texture */
+/* Site-wide white paper texture (mirrored seamless tile — no visible seams) */
 .paper-texture-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  opacity: 0.3;
-  background-image: url("/texture/white-paper-texture_1194-2403.avif");
+  opacity: 0.37;
+  background-image: url("/texture/white-paper-texture-seamless.webp");
   background-repeat: repeat;
-  background-size: 480px auto;
+  background-size: 960px auto;
 }
 
 @keyframes rise {

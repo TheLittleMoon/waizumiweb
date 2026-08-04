@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import type { ServiceBlock } from "@/content/services/types";
+import { localePath, type Locale } from "@/lib/i18n";
 
 type Section = {
   title: string;
@@ -32,7 +34,13 @@ function groupBlocks(blocks: ServiceBlock[]): {
   return { intro, sections };
 }
 
-function BlockList({ blocks }: { blocks: ServiceBlock[] }) {
+function BlockList({
+  blocks,
+  locale,
+}: {
+  blocks: ServiceBlock[];
+  locale: Locale;
+}) {
   return (
     <div className="space-y-4 text-base leading-relaxed text-ink-soft">
       {blocks.map((block, i) => {
@@ -73,20 +81,35 @@ function BlockList({ blocks }: { blocks: ServiceBlock[] }) {
                 ))}
               </ol>
             );
-          case "link":
+          case "link": {
+            const href = block.external
+              ? block.href
+              : localePath(locale, block.href);
+            if (block.external) {
+              return (
+                <p key={i}>
+                  <a
+                    href={href}
+                    className="font-logo text-sm tracking-wide text-rose-deep underline decoration-rose/40 underline-offset-4 transition hover:decoration-rose"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    → {block.label}
+                  </a>
+                </p>
+              );
+            }
             return (
               <p key={i}>
-                <a
-                  href={block.href}
+                <Link
+                  href={href}
                   className="font-logo text-sm tracking-wide text-rose-deep underline decoration-rose/40 underline-offset-4 transition hover:decoration-rose"
-                  {...(block.external
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
                 >
                   → {block.label}
-                </a>
+                </Link>
               </p>
             );
+          }
           default:
             return null;
         }
@@ -95,7 +118,13 @@ function BlockList({ blocks }: { blocks: ServiceBlock[] }) {
   );
 }
 
-export function ServiceBody({ blocks }: { blocks: ServiceBlock[] }) {
+export function ServiceBody({
+  blocks,
+  locale,
+}: {
+  blocks: ServiceBlock[];
+  locale: Locale;
+}) {
   const { intro, sections } = groupBlocks(blocks);
   const [open, setOpen] = useState<Record<number, boolean>>(() =>
     Object.fromEntries(sections.map((_, i) => [i, i === 0])),
@@ -103,7 +132,7 @@ export function ServiceBody({ blocks }: { blocks: ServiceBlock[] }) {
 
   return (
     <div className="space-y-6">
-      {intro.length > 0 ? <BlockList blocks={intro} /> : null}
+      {intro.length > 0 ? <BlockList blocks={intro} locale={locale} /> : null}
 
       <div className="space-y-3">
         {sections.map((section, i) => {
@@ -135,7 +164,7 @@ export function ServiceBody({ blocks }: { blocks: ServiceBlock[] }) {
               </button>
               {isOpen ? (
                 <div className="border-t border-rose/20 px-5 py-5">
-                  <BlockList blocks={section.blocks} />
+                  <BlockList blocks={section.blocks} locale={locale} />
                 </div>
               ) : null}
             </div>

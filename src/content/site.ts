@@ -1,4 +1,6 @@
-export type Locale = "en" | "ja";
+import type { Locale } from "@/lib/i18n";
+
+export type { Locale };
 
 export const site = {
   nameEn: "WAIZUMI Immigration Consulting Office",

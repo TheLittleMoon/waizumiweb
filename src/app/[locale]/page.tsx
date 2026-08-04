@@ -1,17 +1,37 @@
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { CtaBand, SectionHeading } from "@/components/SiteChrome";
 import { ServiceGrid } from "@/components/ServiceGrid";
 import { HighlightGrid } from "@/components/HighlightGrid";
+import { t } from "@/content/ui";
 import { concerns, profile, site } from "@/content/site";
+import {
+  isLocale,
+  localePath,
+  pickLocalized,
+  type Locale,
+} from "@/lib/i18n";
 
-export default function HomePage() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function HomePage({ params }: Props) {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
+  const locale: Locale = raw;
+
   return (
     <>
       <section className="relative min-h-[100svh] overflow-hidden">
         <Image
           src="/SaporoSunset.jpeg"
-          alt="Odori Park and central Sapporo at sunset, with mountains on the horizon"
+          alt={
+            locale === "ja"
+              ? "夕暮れの大通公園と札幌市街、遠景の山並み"
+              : "Odori Park and central Sapporo at sunset, with mountains on the horizon"
+          }
           fill
           priority
           sizes="100vw"
@@ -32,29 +52,29 @@ export default function HomePage() {
         <div className="relative mx-auto flex min-h-[100svh] max-w-6xl flex-col justify-end px-5 pb-20 pt-32 md:justify-end md:px-8 md:pb-24">
           <div className="max-w-2xl text-white">
             <p className="animate-rise font-logo text-xs tracking-[0.28em] text-white/80 uppercase">
-              Sapporo · Since 2017
+              {t(locale, "heroEyebrow")}
             </p>
             <h1 className="animate-rise-delay-1 mt-5 font-logo text-5xl leading-[1.02] tracking-tight md:text-7xl">
               WAIZUMI
             </h1>
             <p className="animate-rise-delay-1 mt-2 font-logo text-lg text-white/90 md:text-2xl">
-              Immigration Consulting Office
+              {t(locale, "officeSubtitle")}
             </p>
             <p className="animate-rise-delay-2 mt-6 max-w-lg text-base leading-relaxed text-white/85 md:text-lg">
-              {site.taglineEn}
+              {locale === "ja" ? site.taglineJa : site.taglineEn}
             </p>
             <div className="animate-rise-delay-2 mt-10 flex flex-wrap gap-3">
               <Link
-                href="/contact"
+                href={localePath(locale, "/contact")}
                 className="rounded-full bg-white px-6 py-3 text-sm font-medium text-ink transition hover:bg-white/90"
               >
-                Book a consultation
+                {t(locale, "bookConsultation")}
               </Link>
               <Link
-                href="/services"
+                href={localePath(locale, "/services")}
                 className="rounded-full border border-white/45 bg-white/10 px-6 py-3 text-sm text-white backdrop-blur-sm transition hover:bg-white/20"
               >
-                View services
+                {t(locale, "viewServices")}
               </Link>
             </div>
           </div>
@@ -63,9 +83,9 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
         <SectionHeading
-          eyebrow="When you need help"
-          title="Common situations we hear every week"
-          body="If any of these feel familiar, you are in the right place. We listen first, then map a clear path."
+          eyebrow={t(locale, "concernsEyebrow")}
+          title={t(locale, "concernsTitle")}
+          body={t(locale, "concernsBody")}
         />
         <div className="mt-12 grid gap-8 md:grid-cols-3">
           {concerns.map((item) => (
@@ -74,10 +94,10 @@ export default function HomePage() {
               className="rounded-2xl bg-rose/15 px-6 py-7 ring-1 ring-rose/20 transition hover:-translate-y-0.5 hover:bg-rose/25"
             >
               <h3 className="font-logo text-xl leading-snug text-ink">
-                {item.titleEn}
+                {pickLocalized(item, locale, "title")}
               </h3>
               <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-                {item.bodyEn}
+                {pickLocalized(item, locale, "body")}
               </p>
             </article>
           ))}
@@ -85,26 +105,28 @@ export default function HomePage() {
       </section>
 
       <CtaBand
-        title="Tell us your situation"
-        body="A short conversation is often enough to see the next clear step."
-        cta="Start a consultation"
+        locale={locale}
+        title={t(locale, "ctaSituationTitle")}
+        body={t(locale, "ctaSituationBody")}
+        cta={t(locale, "ctaSituationCta")}
       />
 
       <section className="border-y border-line">
         <div className="mx-auto max-w-6xl px-5 py-20 md:px-8 md:py-28">
           <SectionHeading
-            eyebrow="Client services"
-            title="An overview of what we handle"
-            body="Choose a matter to open the full details."
+            eyebrow={t(locale, "servicesEyebrow")}
+            title={t(locale, "servicesTitle")}
+            body={t(locale, "servicesBody")}
           />
-          <ServiceGrid className="mt-12" />
+          <ServiceGrid locale={locale} className="mt-12" />
         </div>
       </section>
 
       <CtaBand
-        title="Not sure which visa fits?"
-        body="We’ll help you sort the options in plain language — in Japanese or English."
-        cta="Ask the office"
+        locale={locale}
+        title={t(locale, "ctaVisaTitle")}
+        body={t(locale, "ctaVisaBody")}
+        cta={t(locale, "ctaVisaCta")}
       />
 
       <section>
@@ -112,10 +134,10 @@ export default function HomePage() {
           <div className="mb-12">
             <SectionHeading
               align="center"
-              title="Why clients choose this office"
+              title={t(locale, "highlightsTitle")}
             />
           </div>
-          <HighlightGrid />
+          <HighlightGrid locale={locale} />
         </div>
       </section>
 
@@ -124,7 +146,7 @@ export default function HomePage() {
           <div className="relative mx-auto aspect-[3/4] w-full max-w-sm overflow-hidden md:mx-0">
             <Image
               src="/TomomiWaizumi.avif"
-              alt={`${profile.nameEn}`}
+              alt={locale === "ja" ? profile.nameJa : profile.nameEn}
               fill
               sizes="(max-width: 768px) 80vw, 320px"
               className="object-cover object-top"
@@ -132,36 +154,36 @@ export default function HomePage() {
           </div>
           <div>
             <p className="text-xs tracking-[0.2em] text-rose-deep uppercase">
-              Meet the principal
+              {t(locale, "meetPrincipal")}
             </p>
             <h2 className="font-logo mt-3 text-3xl text-ink md:text-4xl">
-              {profile.nameEn}
+              {locale === "ja" ? profile.nameJa : profile.nameEn}
             </h2>
             <p className="mt-2 text-sm text-mute">
-              {profile.nameJa} · {profile.roleEn}
+              {locale === "ja" ? profile.roleJa : profile.roleEn}
             </p>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft">
-              {profile.bioEn}
+              {locale === "ja" ? profile.bioJa : profile.bioEn}
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/about"
+                href={localePath(locale, "/about")}
                 className="rounded-full bg-rose-deep px-6 py-3 text-sm font-medium text-white transition hover:bg-rose"
               >
-                Read her story
+                {t(locale, "readStory")}
               </Link>
               <Link
-                href="/contact"
+                href={localePath(locale, "/contact")}
                 className="rounded-full border border-ink/15 px-6 py-3 text-sm text-ink transition hover:border-rose/40"
               >
-                Get in touch
+                {t(locale, "getInTouch")}
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }

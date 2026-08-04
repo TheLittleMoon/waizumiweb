@@ -4,13 +4,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { MainNav } from "@/components/MainNav";
+import { t } from "@/content/ui";
 import { site } from "@/content/site";
+import {
+  localePath,
+  stripLocalePrefix,
+  type Locale,
+} from "@/lib/i18n";
 
-export function Header() {
-  const pathname = usePathname();
+export function Header({ locale }: { locale: Locale }) {
+  const pathname = usePathname() || "/";
   const [scrolled, setScrolled] = useState(false);
-  const isHome = pathname === "/";
+  const path = stripLocalePrefix(pathname);
+  const isHome = path === "/";
   const overHero = isHome && !scrolled;
 
   useEffect(() => {
@@ -31,23 +39,18 @@ export function Header() {
       }`}
     >
       <div className="relative mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4 md:px-8">
-        <Link href="/" className="group flex items-center gap-3">
-          <span
-            className={`flex items-center justify-center transition ${
-              overHero
-                ? "rounded-md bg-white/95 p-1 shadow-[0_2px_14px_rgba(0,0,0,0.25)]"
-                : ""
-            }`}
-          >
-            <Image
-              src="/logo.png"
-              alt={site.nameEn}
-              width={48}
-              height={36}
-              className="h-8 w-auto sm:h-9"
-              priority
-            />
-          </span>
+        <Link
+          href={localePath(locale, "/")}
+          className="group flex items-center gap-3"
+        >
+          <Image
+            src={overHero ? "/waizumi-logo_white.png" : "/waizumi-logofinal.png"}
+            alt={locale === "ja" ? site.nameJa : site.nameEn}
+            width={48}
+            height={32}
+            className="h-8 w-auto sm:h-9"
+            priority
+          />
           <span
             className={`font-logo hidden text-[0.8rem] tracking-[0.22em] uppercase sm:block ${
               overHero
@@ -59,12 +62,16 @@ export function Header() {
           </span>
         </Link>
 
-        <MainNav tone={overHero ? "light" : "dark"} />
+        <MainNav locale={locale} tone={overHero ? "light" : "dark"} />
 
         <div className="flex items-center gap-2 sm:gap-3">
+          <LanguageSwitcher
+            locale={locale}
+            tone={overHero ? "light" : "dark"}
+          />
           <a
             href={`tel:${site.phone.replaceAll("-", "")}`}
-            className={`hidden rounded-full px-3 py-2 text-sm transition md:inline-flex ${
+            className={`hidden rounded-full px-3 py-2 text-sm transition lg:inline-flex ${
               overHero
                 ? "text-white/90 hover:text-white"
                 : "text-rose-deep hover:text-ink"
@@ -73,14 +80,14 @@ export function Header() {
             {site.phone}
           </a>
           <Link
-            href="/contact"
+            href={localePath(locale, "/contact")}
             className={`rounded-full px-4 py-2 text-sm font-medium transition ${
               overHero
                 ? "bg-white text-ink hover:bg-white/90"
                 : "bg-rose-deep text-white hover:bg-rose"
             }`}
           >
-            Consultation
+            {t(locale, "consultation")}
           </Link>
         </div>
       </div>

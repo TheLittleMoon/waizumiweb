@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { t } from "@/content/ui";
 import { site } from "@/content/site";
+import { localePath, type Locale } from "@/lib/i18n";
 
 export { Header } from "@/components/Header";
 
-export function Footer() {
+export function Footer({ locale }: { locale: Locale }) {
   return (
     <footer className="relative overflow-hidden border-t border-line text-ink">
       <img
@@ -17,10 +19,10 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <Image
-              src="/logo.png"
+              src="/waizumi-logofinal.png"
               alt=""
               width={48}
-              height={36}
+              height={32}
               className="h-9 w-auto"
             />
             <div>
@@ -28,35 +30,41 @@ export function Footer() {
                 WAIZUMI
               </p>
               <p className="font-logo text-xs tracking-wide text-rose">
-                Immigration Consulting Office
+                {t(locale, "officeSubtitle")}
               </p>
             </div>
           </div>
           <p className="mt-5 max-w-sm text-sm leading-relaxed text-ink-soft">
-            {site.taglineEn}
+            {locale === "ja" ? site.taglineJa : site.taglineEn}
           </p>
-          <p className="mt-2 text-sm text-mute">{site.nameJa}</p>
+          <p className="mt-2 text-sm text-mute">
+            {locale === "ja" ? site.nameJa : site.nameEn}
+          </p>
         </div>
         <div className="text-sm leading-relaxed text-ink-soft">
           <p className="mb-3 text-xs tracking-[0.2em] text-rose uppercase">
-            Visit
+            {t(locale, "visit")}
           </p>
-          <p>{site.addressEn}</p>
-          <p className="mt-1 text-mute">{site.addressJa}</p>
-          <p className="mt-4">{site.hoursEn}</p>
+          <p>{locale === "ja" ? site.addressJa : site.addressEn}</p>
+          <p className="mt-4">
+            {locale === "ja" ? site.hoursJa : site.hoursEn}
+          </p>
         </div>
         <div className="text-sm leading-relaxed text-ink-soft">
           <p className="mb-3 text-xs tracking-[0.2em] text-rose uppercase">
-            Contact
+            {t(locale, "contact")}
           </p>
           <p>
             TEL{" "}
-            <a className="transition hover:text-rose-deep" href={`tel:0112061025`}>
+            <a
+              className="transition hover:text-rose-deep"
+              href={`tel:0112061025`}
+            >
               {site.phone}
             </a>
           </p>
           <p>
-            Mobile{" "}
+            {t(locale, "mobile")}{" "}
             <a
               className="transition hover:text-rose-deep"
               href={`tel:09097536555`}
@@ -75,7 +83,8 @@ export function Footer() {
         </div>
       </div>
       <div className="relative border-t border-line px-5 py-5 text-center text-xs text-mute md:px-8">
-        © {new Date().getFullYear()} {site.nameEn}. All rights reserved.
+        © {new Date().getFullYear()}{" "}
+        {locale === "ja" ? site.nameJa : site.nameEn}. {t(locale, "rights")}
       </div>
     </footer>
   );
@@ -127,11 +136,13 @@ export function SectionHeading({
 }
 
 export function CtaBand({
-  title = "Ready to talk through your situation?",
-  body = "Kind, careful guidance for visa and international matters in Sapporo.",
-  cta = "Contact the office",
+  locale,
+  title,
+  body,
+  cta,
   href = "/contact",
 }: {
+  locale: Locale;
   title?: string;
   body?: string;
   cta?: string;
@@ -149,14 +160,18 @@ export function CtaBand({
       />
       <div className="relative mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-5 py-14 md:flex-row md:items-center md:px-8 md:py-16">
         <div>
-          <p className="font-logo text-2xl text-ink md:text-3xl">{title}</p>
-          <p className="mt-2 text-ink-soft">{body}</p>
+          <p className="font-logo text-2xl text-ink md:text-3xl">
+            {title ?? t(locale, "ctaDefaultTitle")}
+          </p>
+          <p className="mt-2 text-ink-soft">
+            {body ?? t(locale, "ctaDefaultBody")}
+          </p>
         </div>
         <Link
-          href={href}
+          href={localePath(locale, href)}
           className="inline-flex rounded-full bg-rose-deep px-6 py-3 text-sm font-medium text-white transition hover:bg-rose"
         >
-          {cta}
+          {cta ?? t(locale, "ctaDefaultCta")}
         </Link>
       </div>
     </section>

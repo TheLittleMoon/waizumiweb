@@ -26,5 +26,8 @@ export type ServiceDetail = {
   blurbJa: string;
   /** Official / government sources cited on the original pages — not the old Wix URL */
   references?: ServiceReference[];
+  /** English body (accordion sections) */
   blocks: ServiceBlock[];
+  /** Japanese body from the original site — preserve nuance */
+  blocksJa: ServiceBlock[];
 };

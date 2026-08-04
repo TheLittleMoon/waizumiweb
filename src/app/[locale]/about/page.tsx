@@ -1,25 +1,35 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import { CtaBand, SectionHeading } from "@/components/SiteChrome";
+import { t } from "@/content/ui";
 import { profile, site } from "@/content/site";
+import { isLocale, type Locale } from "@/lib/i18n";
 
-export const metadata: Metadata = {
-  title: "About",
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function AboutPage() {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) return {};
+  return { title: t(raw, "aboutEyebrow") };
+}
+
+export default async function AboutPage({ params }: Props) {
+  const { locale: raw } = await params;
+  if (!isLocale(raw)) notFound();
+  const locale: Locale = raw;
+
   return (
     <>
       <section className="border-b border-line bg-gradient-to-b from-paper-warm to-paper px-5 pb-16 pt-32 md:px-8">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="プロフィール · Profile"
-            title={profile.nameEn}
-            body={profile.roleEn}
+            eyebrow={t(locale, "aboutEyebrow")}
+            title={locale === "ja" ? profile.nameJa : profile.nameEn}
+            body={locale === "ja" ? profile.roleJa : profile.roleEn}
           />
-          <p className="mt-2 text-sm text-mute">
-            {profile.nameJa} · {profile.roleJa}
-          </p>
         </div>
       </section>
 
@@ -28,7 +38,7 @@ export default function AboutPage() {
           <figure className="relative aspect-[3/4] overflow-hidden md:sticky md:top-28">
             <Image
               src="/TomomiWaizumi.avif"
-              alt={`${profile.nameEn} / ${profile.nameJa}`}
+              alt={locale === "ja" ? profile.nameJa : profile.nameEn}
               fill
               sizes="(max-width: 768px) 100vw, 320px"
               className="object-cover object-top"
@@ -37,18 +47,17 @@ export default function AboutPage() {
           </figure>
 
           <div>
-            <h2 className="font-display text-2xl text-ink">Her story</h2>
+            <h2 className="font-display text-2xl text-ink">
+              {t(locale, "herStory")}
+            </h2>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-soft">
-              {profile.bioEn}
-            </p>
-            <p className="mt-6 max-w-2xl text-sm leading-relaxed text-mute">
-              {profile.bioJa}
+              {locale === "ja" ? profile.bioJa : profile.bioEn}
             </p>
           </div>
 
           <aside className="border-t border-line pt-6 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-10">
             <h2 className="text-xs tracking-[0.2em] text-rose uppercase">
-              Credentials
+              {t(locale, "credentials")}
             </h2>
             <ul className="mt-5 space-y-3 text-sm leading-relaxed text-ink-soft">
               {profile.credentials.map((item) => (
@@ -57,18 +66,17 @@ export default function AboutPage() {
             </ul>
             <div className="mt-10">
               <h2 className="text-xs tracking-[0.2em] text-rose uppercase">
-                Office
+                {t(locale, "office")}
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-                {site.addressEn}
+                {locale === "ja" ? site.addressJa : site.addressEn}
               </p>
-              <p className="mt-2 text-sm text-mute">{site.addressJa}</p>
             </div>
           </aside>
         </div>
       </section>
 
-      <CtaBand />
+      <CtaBand locale={locale} />
     </>
   );
 }
