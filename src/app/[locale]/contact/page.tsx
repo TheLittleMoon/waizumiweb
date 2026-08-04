@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SectionHeading } from "@/components/SiteChrome";
+import { SocialLinks, WeChatCard } from "@/components/SocialLinks";
 import { t } from "@/content/ui";
 import { site } from "@/content/site";
 import { isLocale, type Locale } from "@/lib/i18n";
@@ -33,7 +34,7 @@ export default async function ContactPage({ params }: Props) {
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-14 px-5 py-16 md:grid-cols-2 md:px-8 md:py-24">
-        <div className="space-y-8 text-sm leading-relaxed text-ink-soft">
+        <div className="space-y-10 text-sm leading-relaxed text-ink-soft">
           <div>
             <p className="text-xs tracking-[0.2em] text-rose uppercase">
               {t(locale, "phone")}
@@ -117,6 +118,21 @@ export default async function ContactPage({ params }: Props) {
           </button>
           <p className="text-xs text-mute">{t(locale, "formNote")}</p>
         </form>
+      </section>
+
+      <section className="border-t border-line bg-paper-warm/50 px-5 py-14 md:px-8">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-start md:justify-between md:gap-16">
+          <div>
+            <p className="text-xs tracking-[0.2em] text-rose uppercase">
+              {t(locale, "follow")}
+            </p>
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-ink-soft">
+              {t(locale, "otherChannels")}
+            </p>
+            <SocialLinks locale={locale} className="mt-5" />
+          </div>
+          <WeChatCard locale={locale} compact />
+        </div>
       </section>
     </>
   );

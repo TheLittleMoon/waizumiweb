@@ -21,6 +21,11 @@ export const site = {
     hokkaido: "北海道行政書士会札幌支部所属",
     immigration: "札幌出入国在留管理局届出済申請取次行政書士 札（行）第17-26号",
   },
+  social: {
+    facebook: "https://www.facebook.com/waizumi.gyousei/",
+    instagram: "https://www.instagram.com/waizumiimmigrationconsulting/",
+    wechatQr: "/wechat-qr.jpg",
+  },
 };
 
 export const nav = [

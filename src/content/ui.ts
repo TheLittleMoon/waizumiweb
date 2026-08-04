@@ -22,6 +22,34 @@ const ui = {
     ja: "All rights reserved.",
     en: "All rights reserved.",
   },
+  privacy: {
+    ja: "個人情報保護規定",
+    en: "Privacy Policy",
+  },
+  follow: {
+    ja: "フォロー",
+    en: "Follow",
+  },
+  wechat: {
+    ja: "WeChat",
+    en: "WeChat",
+  },
+  wechatBody: {
+    ja: "WeChatでのご相談も承ります。QRコードから友だち追加してください。",
+    en: "WeChat consultations are welcome. Scan the QR code to connect.",
+  },
+  wechatBodyExtra: {
+    ja: "LINE・Skype・FaceTimeもご利用いただけます。",
+    en: "LINE, Skype, and FaceTime are also available.",
+  },
+  wechatQrAlt: {
+    ja: "WeChat QRコード",
+    en: "WeChat QR code",
+  },
+  otherChannels: {
+    ja: "SNSやメッセージアプリでもお気軽にご連絡ください。",
+    en: "You’re also welcome to reach us on social or messaging apps.",
+  },
   officeSubtitle: {
     ja: "行政書士事務所",
     en: "Immigration Consulting Office",

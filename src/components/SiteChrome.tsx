@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { SocialLinks } from "@/components/SocialLinks";
 import { t } from "@/content/ui";
 import { site } from "@/content/site";
 import { localePath, type Locale } from "@/lib/i18n";
@@ -40,6 +41,12 @@ export function Footer({ locale }: { locale: Locale }) {
           <p className="mt-2 text-sm text-mute">
             {locale === "ja" ? site.nameJa : site.nameEn}
           </p>
+          <div className="mt-6">
+            <p className="mb-3 text-xs tracking-[0.2em] text-rose uppercase">
+              {t(locale, "follow")}
+            </p>
+            <SocialLinks locale={locale} />
+          </div>
         </div>
         <div className="text-sm leading-relaxed text-ink-soft">
           <p className="mb-3 text-xs tracking-[0.2em] text-rose uppercase">
@@ -83,8 +90,18 @@ export function Footer({ locale }: { locale: Locale }) {
         </div>
       </div>
       <div className="relative border-t border-line px-5 py-5 text-center text-xs text-mute md:px-8">
-        © {new Date().getFullYear()}{" "}
-        {locale === "ja" ? site.nameJa : site.nameEn}. {t(locale, "rights")}
+        <p>
+          © {new Date().getFullYear()}{" "}
+          {locale === "ja" ? site.nameJa : site.nameEn}. {t(locale, "rights")}
+        </p>
+        <p className="mt-2">
+          <Link
+            href={localePath(locale, "/privacy")}
+            className="transition hover:text-rose-deep"
+          >
+            {t(locale, "privacy")}
+          </Link>
+        </p>
       </div>
     </footer>
   );
