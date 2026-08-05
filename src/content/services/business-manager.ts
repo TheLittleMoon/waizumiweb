@@ -176,7 +176,7 @@ export const businessManager: ServiceDetail = {
     },
     {
       type: "p",
-      text: "At Waizumi Immigration Office, gyoseishoshi, tax accountants, and labor and social security attorneys work together to support foreign clients from company setup and the Business Manager visa through tax and labor procedures after permission.",
+      text: "At Waizumi Immigration Office, administrative scriveners, tax accountants, and labor and social security attorneys work together to support foreign clients from company setup and the Business Manager visa through tax and labor procedures after permission.",
     },
     {
       type: "p",

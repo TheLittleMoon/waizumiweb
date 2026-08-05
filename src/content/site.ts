@@ -24,7 +24,6 @@ export const site = {
   social: {
     facebook: "https://www.facebook.com/waizumi.gyousei/",
     instagram: "https://www.instagram.com/waizumiimmigrationconsulting/",
-    wechatQr: "/wechat-qr.jpg",
   },
 };
 
@@ -101,12 +100,12 @@ export const highlights = [
   },
   {
     id: "english",
-    titleEn: "English available",
-    titleJa: "英語対応OK！",
+    titleEn: "English & Chinese available",
+    titleJa: "英語・中国語対応OK！",
     bodyEn:
-      "Foreign clients less confident in Japanese, and employers dealing with English documents, can rely on English support.",
+      "Foreign clients less confident in Japanese, and employers dealing with English or Chinese documents, can rely on bilingual support.",
     bodyJa:
-      "日本語に不安のある外国人の方や、英語の書類でお困りの雇用主の方も、英語でご相談いただけます。",
+      "日本語に不安のある外国人の方や、英語・中国語の書類でお困りの雇用主の方も、英語・中国語でご相談いただけます。",
     icon: "chat" as const,
   },
   {
@@ -114,7 +113,7 @@ export const highlights = [
     titleEn: "A wider professional network",
     titleJa: "他士業との豊富なネットワーク",
     bodyEn:
-      "Some matters need more than a gyoseishoshi alone. Through lawyers, judicial scriveners, tax accountants, and labor specialists, we offer one-stop support—including foreign employment questions.",
+      "Some matters need more than an administrative scrivener alone. Through lawyers, judicial scriveners, tax accountants, and labor specialists, we offer one-stop support—including foreign employment questions.",
     bodyJa:
       "行政書士だけでは解決できないことも。弁護士・司法書士・税理士・社労士などと連携し、ワンストップでサポートします。",
     icon: "nodes" as const,
@@ -152,19 +151,19 @@ export const points = [
   },
   {
     n: "04",
-    titleEn: "English available",
-    titleJa: "英語対応OK！",
+    titleEn: "English & Chinese available",
+    titleJa: "英語・中国語対応OK！",
     bodyEn:
-      "Foreign clients who are less confident in Japanese, and employers dealing with English documents, can rely on English support.",
+      "Foreign clients who are less confident in Japanese, and employers dealing with English or Chinese documents, can rely on bilingual support.",
     bodyJa:
-      "日本語に自信のない外国人の方や、英語で作成された書類の対応にお困りの雇用主の方もご安心ください。英語対応いたします。",
+      "日本語に自信のない外国人の方や、英語・中国語で作成された書類の対応にお困りの雇用主の方もご安心ください。英語・中国語対応いたします。",
   },
   {
     n: "05",
     titleEn: "A wider professional network",
     titleJa: "他士業との豊富なネットワーク",
     bodyEn:
-      "Some matters need more than a gyoseishoshi alone. Through lawyers, judicial scriveners, accountants, tax accountants, and labor & social security attorneys, we offer one-stop support—including foreign employment and labor questions.",
+      "Some matters need more than an administrative scrivener alone. Through lawyers, judicial scriveners, accountants, tax accountants, and labor & social security attorneys, we offer one-stop support—including foreign employment and labor questions.",
     bodyJa:
       "お客様の困りごとは行政書士だけでは解決できないこともあります。弁護士、司法書士、会計士、税理士、社会保険労務士等、他士業とのネットワークを生かし、ワンストップサービスでお客様をサポートします。外国人の労務、雇用に関することなど、何でもお気軽にご相談ください。",
   },
@@ -233,13 +232,6 @@ export const services = [
     titleJa: "翻訳・認証",
     blurbEn: "Japanese ↔ English translation and certification support.",
     blurbJa: "日本語・英語の翻訳",
-  },
-  {
-    slug: "overseas-accounts",
-    titleEn: "Overseas Account Opening Support",
-    titleJa: "海外口座開設サポート",
-    blurbEn: "Help opening bank accounts abroad.",
-    blurbJa: "海外に銀行口座を持ちたい",
   },
 ] as const;
 
@@ -337,12 +329,12 @@ export const profile = {
     "英検準１級",
   ],
   bioEn:
-    "Originally from Obihiro. At 24, determined to speak English more confidently, she left office work for a short study period in the UK. There she formed friendships with students from around the world, discovered the richness of cross-cultural communication, and also felt how unsettling it can be to live abroad when language alone is not enough. She became a gyoseishoshi to support foreign nationals with visa and residence matters—and continues that work today.",
+    "Originally from Obihiro. At 24, determined to speak English more confidently, she left office work for a short study period in the UK. There she formed friendships with students from around the world, discovered the richness of cross-cultural communication, and also felt how unsettling it can be to live abroad when language alone is not enough. She became an administrative scrivener to support foreign nationals with visa and residence matters—and continues that work today.",
   bioJa:
     "帯広市出身。２４歳のときに、もっと英語を話せるようになりたい！と一念発起し、OLを辞めてイギリスに短期留学。そこで世界各国の学生と親しくなり、異文化コミュニケーションの面白さを知ると同時に、言葉が万能ではない外国で暮らすことの心細さも経験。外国人のビザ手続き、在留のサポートをするために行政書士を目指し開業、現在に至る。",
 };
 
-/** Fees reconstructed from client fee sheet PDF (税込み). English column = 英語対応加算. */
+/** Fees reconstructed from client fee sheet PDF (税込み). English/Chinese column = 英語・中国語対応加算. */
 export const fees = {
   notesJa: [
     "上記はすべて税込み料金です。",

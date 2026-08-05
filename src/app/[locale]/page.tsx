@@ -63,6 +63,9 @@ export default async function HomePage({ params }: Props) {
             <p className="animate-rise-delay-2 mt-6 max-w-lg text-base leading-relaxed text-white/85 md:text-lg">
               {locale === "ja" ? site.taglineJa : site.taglineEn}
             </p>
+            <p className="animate-rise-delay-2 mt-4 max-w-lg text-sm font-medium tracking-wide text-white md:text-base">
+              {t(locale, "languageSupport")}
+            </p>
             <div className="animate-rise-delay-2 mt-10 flex flex-wrap gap-3">
               <Link
                 href={localePath(locale, "/contact")}

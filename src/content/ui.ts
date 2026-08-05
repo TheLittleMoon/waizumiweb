@@ -30,29 +30,17 @@ const ui = {
     ja: "フォロー",
     en: "Follow",
   },
-  wechat: {
-    ja: "WeChat",
-    en: "WeChat",
-  },
-  wechatBody: {
-    ja: "WeChatでのご相談も承ります。QRコードから友だち追加してください。",
-    en: "WeChat consultations are welcome. Scan the QR code to connect.",
-  },
-  wechatBodyExtra: {
-    ja: "LINE・Skype・FaceTimeもご利用いただけます。",
-    en: "LINE, Skype, and FaceTime are also available.",
-  },
-  wechatQrAlt: {
-    ja: "WeChat QRコード",
-    en: "WeChat QR code",
-  },
   otherChannels: {
-    ja: "SNSやメッセージアプリでもお気軽にご連絡ください。",
-    en: "You’re also welcome to reach us on social or messaging apps.",
+    ja: "Facebook・Instagramでもお気軽にご連絡ください。",
+    en: "You’re also welcome to reach us on Facebook or Instagram.",
   },
   officeSubtitle: {
-    ja: "行政書士事務所",
+    ja: "行政書士わいずみともみ事務所",
     en: "Immigration Consulting Office",
+  },
+  languageSupport: {
+    ja: "英語・中国語でのご相談も可能です",
+    en: "Support in English and Chinese is available",
   },
   heroEyebrow: { ja: "札幌 · 2017年開業", en: "Sapporo · Since 2017" },
   concernsEyebrow: { ja: "こんなお悩みはありませんか", en: "When you need help" },
@@ -66,8 +54,8 @@ const ui = {
   },
   ctaSituationTitle: { ja: "まずは状況をお聞かせください", en: "Tell us your situation" },
   ctaSituationBody: {
-    ja: "短いお話でも、次に進む道筋が見えてくることがあります。",
-    en: "A short conversation is often enough to see the next clear step.",
+    ja: "短いお話でも、次に進む道筋が見えてくることがあります。英語・中国語でのご相談も可能です。",
+    en: "A short conversation is often enough to see the next clear step. Support in English and Chinese is available.",
   },
   ctaSituationCta: { ja: "ご相談を始める", en: "Start a consultation" },
   servicesEyebrow: { ja: "取扱業務", en: "Client services" },
@@ -83,8 +71,8 @@ const ui = {
   },
   ctaVisaTitle: { ja: "どのビザが合うかわからない方へ", en: "Not sure which visa fits?" },
   ctaVisaBody: {
-    ja: "わかりやすい言葉で、選択肢を整理してお伝えします。英語でのご相談も可能です。",
-    en: "We’ll help you sort the options in plain language — in Japanese or English.",
+    ja: "わかりやすい言葉で、選択肢を整理してお伝えします。英語・中国語でのご相談も可能です。",
+    en: "We’ll help you sort the options in plain language. Support in English and Chinese is available.",
   },
   ctaVisaCta: { ja: "事務所へ問い合わせる", en: "Ask the office" },
   highlightsTitle: {
@@ -107,14 +95,14 @@ const ui = {
   feesEyebrow: { ja: "報酬額一覧", en: "Fees" },
   feesTitle: { ja: "料金のご案内", en: "Transparent fee schedule" },
   feesBody: {
-    ja: "表示金額はすべて税込みです。英語対応加算がある項目は表に記載しています。最終金額はご相談のうえご案内します。",
-    en: "All amounts include tax. An English-support surcharge applies where noted. Final quotes follow consultation.",
+    ja: "表示金額はすべて税込みです。英語・中国語対応加算がある項目は表に記載しています。最終金額はご相談のうえご案内します。",
+    en: "All amounts include tax. An English or Chinese support surcharge applies where noted. Final quotes follow consultation.",
   },
   consulting: { ja: "相談", en: "Consulting" },
   serviceCol: { ja: "業務", en: "Service" },
   feeCol: { ja: "報酬額", en: "Fee" },
   matterCol: { ja: "申請内容", en: "Matter" },
-  englishCol: { ja: "英語対応加算", en: "English support" },
+  englishCol: { ja: "英語・中国語対応加算", en: "English / Chinese support" },
   notes: { ja: "ご注意", en: "Notes" },
   contactEyebrow: { ja: "お問い合わせ", en: "Contact" },
   contactTitle: { ja: "まずはお気軽にご相談ください", en: "Let’s start with a conversation" },

@@ -4,13 +4,13 @@ export const privacy = {
   introJa:
     "行政書士わいずみともみ事務所は、行政書士法第十二条を遵守します。",
   introEn:
-    "Waizumi Immigration Office complies with Article 12 of the Gyoseishoshi Act.",
+    "Waizumi Immigration Office complies with Article 12 of the Administrative Scrivener Act.",
   articleHeadingJa: "（秘密を守る義務）",
   articleHeadingEn: "(Duty of confidentiality)",
   articleJa:
     "第十二条 行政書士は、正当な理由がなく、その業務上取り扱った事項について知り得た秘密を漏らしてはならない。行政書士でなくなった後も、また同様とする。",
   articleEn:
-    "Article 12 A Gyoseishoshi Lawyer shall not divulge, without justifiable reasons, any secrets that come to his/her knowledge concerning matters handled in the course of his/her duties. The same shall apply even after he/she ceases to be a Gyoseishoshi Lawyer.",
+    "Article 12 An administrative scrivener shall not divulge, without justifiable reasons, any secrets that come to his/her knowledge concerning matters handled in the course of his/her duties. The same shall apply even after he/she ceases to be an administrative scrivener.",
   policyHeadingJa: "個人情報保護ポリシー",
   policyHeadingEn: "Privacy Policy",
   pointsJa: [

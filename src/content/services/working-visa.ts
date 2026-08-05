@@ -81,7 +81,7 @@ export const workingVisa: ServiceDetail = {
     },
     {
       type: "p",
-      text: "To apply for a working visa at Immigration, you must first determine which status of residence matches the intended activities in Japan. The requirements for each status are detailed and complex. Please consult an immigration administrative scrivener (gyoseishoshi) who handles applications first.",
+      text: "To apply for a working visa at Immigration, you must first determine which status of residence matches the intended activities in Japan. The requirements for each status are detailed and complex. Please consult an immigration administrative scrivener who handles applications first.",
     },
 
     {
@@ -462,11 +462,6 @@ export const workingVisa: ServiceDetail = {
       type: "link",
       label: "Special Permission to Stay",
       href: "/services/special-permission",
-    },
-    {
-      type: "link",
-      label: "Overseas Account Opening Support",
-      href: "/services/overseas-accounts",
     },
     {
       type: "link",
@@ -949,11 +944,6 @@ export const workingVisa: ServiceDetail = {
       type: "link",
       label: "在留特別許可",
       href: "/services/special-permission",
-    },
-    {
-      type: "link",
-      label: "海外口座開設サポート",
-      href: "/services/overseas-accounts",
     },
     {
       type: "link",
