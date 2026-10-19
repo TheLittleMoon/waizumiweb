@@ -197,14 +197,14 @@ export const translation: ServiceDetail = {
     {
       type: "ul",
       items: [
-        "Family register — all matters certificate / partial matters certificate: from 5,000 yen",
-        "Family register extract / abstract (vertical writing / handwritten): from 10,000 yen per page",
-        "Removed family register extract: from 5,000 yen",
+        "Family register — all matters certificate / partial matters certificate: from 7,000 yen per sheet",
+        "Family register extract / abstract (vertical writing / handwritten): from 12,000 yen per page",
+        "Removed family register extract: from 7,000 yen",
         "Residence certificate: from 6,000 yen",
         "Driver’s license: front only 4,000 yen; both sides 6,000 yen",
         "Student ID: front only 4,000 yen",
-        "Bank passbook — facing page (account number, account holder name, etc.): 4,000 yen",
-        "Bank passbook — transaction detail page: 3,000 yen per page",
+        "Bank passbook — facing page (account number, account holder name, etc.): 5,000 yen",
+        "Bank passbook — transaction detail page: 5,000 yen per page",
         "Balance certificate: 5,000 yen",
         "Graduation certificate: 5,000 yen",
         "Academic transcript: from 9,000 yen",
@@ -241,18 +241,6 @@ export const translation: ServiceDetail = {
     {
       type: "h2",
       text: "Foreign-document certification and Apostille agency service — ¥15,000 (before tax)",
-    },
-    {
-      type: "ul",
-      items: [
-        "Notary authentication (including power of attorney / proxy authentication): 8,000 yen",
-        "Notary seal certificate at the Legal Affairs Bureau: 5,000 yen",
-        "Set: notary authentication + notary seal certificate at the Legal Affairs Bureau: 12,000 yen",
-      ],
-    },
-    {
-      type: "note",
-      text: "Agency for official seal confirmation and Apostille applications is quoted individually.",
     },
   ],
   blocksJa: [
@@ -444,14 +432,14 @@ export const translation: ServiceDetail = {
     {
       type: "ul",
       items: [
-        "戸籍　全部事項証明書・一部事項証明書 5,000円～",
-        "戸籍謄本・戸籍抄本（縦書き・手書き） 1ページ 10,000円～",
-        "除籍謄本 5,000円～",
+        "戸籍　全部事項証明書・一部事項証明書 7,000円/枚",
+        "戸籍謄本・戸籍抄本（縦書き・手書き） 1ページ 12,000円～",
+        "除籍謄本 7,000円～",
         "住民票 6,000円～",
         "運転免許証　表のみ4,000円　両面6,000円",
         "学生証　表のみ4,000円",
-        "預金通帳　見開きページ（口座番号や口座名義人などの記載のあるページ） 4,000円",
-        "預金通帳　取引明細ページ 1ページ 3,000円",
+        "預金通帳　見開きページ（口座番号や口座名義人などの記載のあるページ） 5,000円",
+        "預金通帳　取引明細ページ 1ページ 5,000円",
         "残高証明書 5,000円",
         "卒業証明書 5,000円",
         "成績証明書 9,000円～",
@@ -488,18 +476,6 @@ export const translation: ServiceDetail = {
     {
       type: "h2",
       text: "外国文認証・アポスティーユ取得の代行サービス　15,000円（税別）",
-    },
-    {
-      type: "ul",
-      items: [
-        "公証人認証（委任状・代理認証込み） 8,000円",
-        "法務局での公証人押印証明 5,000円",
-        "公証人認証＋法務局での公証人押印証明のセット 12,000円",
-      ],
-    },
-    {
-      type: "note",
-      text: "公印確認、アポスティーユの申請の代行につきましては個別に見積りいたします。",
     },
   ],
 };
