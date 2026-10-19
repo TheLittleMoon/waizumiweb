@@ -8,11 +8,6 @@ export const naturalization: ServiceDetail = {
   blurbJa: "日本国籍を取得する",
   blocks: [
     {
-      type: "lead",
-      text: "If you want to acquire Japanese nationality: naturalization.",
-    },
-
-    {
       type: "h2",
       text: "Do you have concerns about naturalization?",
     },
@@ -173,11 +168,6 @@ export const naturalization: ServiceDetail = {
   ],
   blocksJa: [
     {
-      type: "lead",
-      text: "日本の国籍を取得するなら帰化申請",
-    },
-
-    {
       type: "h2",
       text: "帰化に関するお悩みありませんか。",
     },
@@ -186,7 +176,7 @@ export const naturalization: ServiceDetail = {
       items: [
         "日本国籍を取得したい",
         "帰化の要件をクリアできるか不安",
-        "自分で書類を用意するのが不安",
+        "自分で書類を用意できるか不安",
         "仕事が忙しく時間がない",
         "永住と帰化、どちらが良いか知りたい",
         "法務局にひとりで行くのが不安",

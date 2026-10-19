@@ -7,6 +7,8 @@ import { dependent } from "./dependent";
 import { specialPermission } from "./special-permission";
 import { employeeManagement } from "./employee-management";
 import { translation } from "./translation";
+import { minpaku } from "./minpaku";
+import { specifiedSkilledWorker } from "./specified-skilled-worker";
 import type { ServiceDetail } from "./types";
 
 export const serviceDetails = [
@@ -19,6 +21,8 @@ export const serviceDetails = [
   specialPermission,
   employeeManagement,
   translation,
+  minpaku,
+  specifiedSkilledWorker,
 ] as const satisfies readonly ServiceDetail[];
 
 export function getServiceBySlug(slug: string): ServiceDetail | undefined {
@@ -39,4 +43,6 @@ export {
   specialPermission,
   employeeManagement,
   translation,
+  minpaku,
+  specifiedSkilledWorker,
 };

@@ -5,7 +5,7 @@ export const workingVisa: ServiceDetail = {
   titleEn: "Working Visa",
   titleJa: "就労ビザ",
   blurbEn: "Hire foreign talent and manage work-related status of residence.",
-  blurbJa: "外国人を雇う",
+  blurbJa: "外国人を雇用する",
   references: [
     {
       label: "Ministry of Justice — Certificate of Authorized Employment",
@@ -17,11 +17,6 @@ export const workingVisa: ServiceDetail = {
     },
   ],
   blocks: [
-    {
-      type: "lead",
-      text: "If you want to work in Japan, you need a working visa.",
-    },
-
     {
       type: "h2",
       text: "Hiring a foreign job-changer",
@@ -158,10 +153,6 @@ export const workingVisa: ServiceDetail = {
       text: "If you retain our office for foreign employee status management, we manage renewal schedules for your foreign employees on your behalf and prepare applications with adequate lead time.",
     },
     {
-      type: "p",
-      text: "The fee payable to Immigration for extension permission is 6,000 yen at the counter, or 5,500 yen for online applications (revised from 1 April 2025).",
-    },
-    {
       type: "link",
       label: "Foreign employee status management",
       href: "/services/employee-management",
@@ -169,7 +160,7 @@ export const workingVisa: ServiceDetail = {
 
     {
       type: "h2",
-      text: "Hiring an international student after graduation → Change of status of residence",
+      text: "Changing status to stay in Japan → Change of status of residence",
     },
     {
       type: "p",
@@ -181,7 +172,7 @@ export const workingVisa: ServiceDetail = {
     },
     {
       type: "p",
-      text: "A change of status can be applied for at any time when the change is desired. The fee for change of status permission is 6,000 yen at the counter, or 5,500 yen for online applications (revised from 1 April 2025).",
+      text: "A change of status can be applied for at any time when the change is desired.",
     },
 
     {
@@ -191,10 +182,6 @@ export const workingVisa: ServiceDetail = {
     {
       type: "p",
       text: "When an employed foreign national temporarily returns home for business, to see family, or similar reasons, they can re-enter Japan more easily by appearing at Immigration and applying for re-entry permission.",
-    },
-    {
-      type: "p",
-      text: "The fee is 4,000 yen for a single-entry permit and 7,000 yen for a multiple-entry permit at the counter (3,500 yen / 6,500 yen for online applications; revised from 1 April 2025).",
     },
     {
       type: "p",
@@ -496,11 +483,6 @@ export const workingVisa: ServiceDetail = {
   ],
   blocksJa: [
     {
-      type: "lead",
-      text: "日本で働くなら就労ビザ",
-    },
-
-    {
       type: "h2",
       text: "外国人の転職者を雇用したい",
     },
@@ -640,10 +622,6 @@ export const workingVisa: ServiceDetail = {
       text: "当事務所に「在留管理代行」をご依頼いただければ、企業様に代わって、雇用している外国人の更新のスケジュールを管理し、余裕を持って申請の準備をいたします。",
     },
     {
-      type: "p",
-      text: "尚、出入国在留管理局に支払う更新許可の手数料は、窓口申請6,000円、オンライン申請5,500円です（2025年4月1日改定）。",
-    },
-    {
       type: "link",
       label: "在留管理代行",
       href: "/services/employee-management",
@@ -651,7 +629,7 @@ export const workingVisa: ServiceDetail = {
 
     {
       type: "h2",
-      text: "外国人留学生を卒業後に雇用したい → 在留資格変更許可申請",
+      text: "在留資格を変更して在留したい → 在留資格変更許可申請",
     },
     {
       type: "p",
@@ -663,7 +641,7 @@ export const workingVisa: ServiceDetail = {
     },
     {
       type: "p",
-      text: "在留資格の変更は、変更を希望する時点でいつでも申請することができます。在留資格変更許可の手数料は、窓口申請6,000円、オンライン申請5,500円です（2025年4月1日改定）。",
+      text: "在留資格の変更は、変更を希望する時点でいつでも申請することができます。",
     },
 
     {
@@ -673,10 +651,6 @@ export const workingVisa: ServiceDetail = {
     {
       type: "p",
       text: "雇用している外国人が商用または家族に会うため等の理由で一時帰国するときには、本人が出入国在留管理局に出頭して「再入国許可申請」の手続きをすることにより、簡単に再び入国することができます。",
-    },
-    {
-      type: "p",
-      text: "手数料は、窓口申請の場合、1回限りの許可が4,000円、数次有効の許可が7,000円です（オンライン申請はそれぞれ3,500円・6,500円。2025年4月1日改定）。",
     },
     {
       type: "p",
@@ -871,7 +845,7 @@ export const workingVisa: ServiceDetail = {
     },
     {
       type: "p",
-      text: "●人文知識（人文化学の分野）　経理、金融、総合職、会計、コンサルタントetc..",
+      text: "●人文知識（人文科学の分野）　経理、金融、総合職、会計、コンサルタントetc..",
     },
     {
       type: "p",

@@ -176,7 +176,7 @@ export const businessManager: ServiceDetail = {
     },
     {
       type: "p",
-      text: "At Waizumi Immigration Office, administrative scriveners, tax accountants, and labor and social security attorneys work together to support foreign clients from company setup and the Business Manager visa through tax and labor procedures after permission.",
+      text: "At Waizumi Immigration Office, administrative scriveners, judicial scriveners, tax accountants, and labor and social security attorneys work together to support foreign clients from company setup and the Business Manager visa through tax and labor procedures after permission.",
     },
     {
       type: "p",
@@ -227,7 +227,7 @@ export const businessManager: ServiceDetail = {
     },
     {
       type: "p",
-      text: "日本で会社を設立し社長になるには、この経営・管理ビザを取得しなければなりません。",
+      text: "日本で会社を設立し事業の経営を開始するには、この経営・管理ビザを取得しなければなりません。",
     },
 
     {
@@ -366,7 +366,7 @@ export const businessManager: ServiceDetail = {
     },
     {
       type: "p",
-      text: "行政書士わいずみともみ事務所では、行政書士・税理士・社会保険労務士が協力して外国人のお客様の会社設立から経営・管理ビザの取得、さらにはビザ取得後の会社の税務、労務の手続きまでをフルサポートいたします。",
+      text: "行政書士わいずみともみ事務所では、行政書士・司法書士・税理士・社会保険労務士が協力して外国人のお客様の会社設立から経営・管理ビザの取得、さらにはビザ取得後の会社の税務、労務の手続きまでをフルサポートいたします。",
     },
     {
       type: "p",

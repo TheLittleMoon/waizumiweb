@@ -79,9 +79,6 @@ export default async function FeesPage({ params }: Props) {
                   <th className="py-3 pr-4 font-medium">
                     {t(locale, "feeCol")}
                   </th>
-                  <th className="py-3 font-medium">
-                    {t(locale, "englishCol")}
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -92,9 +89,6 @@ export default async function FeesPage({ params }: Props) {
                     </td>
                     <td className="py-4 pr-4 whitespace-nowrap text-ink">
                       {row.fee}
-                    </td>
-                    <td className="py-4 whitespace-nowrap text-ink-soft">
-                      {row.english}
                     </td>
                   </tr>
                 ))}

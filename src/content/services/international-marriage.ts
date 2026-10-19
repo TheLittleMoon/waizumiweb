@@ -8,11 +8,6 @@ export const internationalMarriage: ServiceDetail = {
   blurbJa: "外国人と結婚する",
   blocks: [
     {
-      type: "lead",
-      text: "If you are marrying internationally: the Spouse of Japanese National visa.",
-    },
-
-    {
       type: "h2",
       text: "What is the Spouse of Japanese National visa?",
     },
@@ -79,11 +74,6 @@ export const internationalMarriage: ServiceDetail = {
     },
   ],
   blocksJa: [
-    {
-      type: "lead",
-      text: "国際結婚するなら日本人の配偶者ビザ",
-    },
-
     {
       type: "h2",
       text: "日本人の配偶者ビザとは",

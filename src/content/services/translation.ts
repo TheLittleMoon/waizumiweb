@@ -4,8 +4,8 @@ export const translation: ServiceDetail = {
   slug: "translation",
   titleEn: "Translation & Certification",
   titleJa: "翻訳・認証",
-  blurbEn: "Japanese ↔ English translation and certification support.",
-  blurbJa: "日本語・英語の翻訳",
+  blurbEn: "Japanese, English, and Chinese translation and certification support.",
+  blurbJa: "日本語・英語・中国語の翻訳",
   references: [
     {
       label: "Ministry of Foreign Affairs — Hague Convention / Apostille",
@@ -23,7 +23,7 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "If you need translation, Apostille, or consular authentication, please use the translation and certification services of Waizumi Immigration Office.",
+      text: "Waizumi Immigration Office provides Japanese ↔ English ↔ Chinese translation, Apostille, and consular authentication support.",
     },
 
     {
@@ -44,7 +44,7 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "Waizumi Immigration Office accepts English ↔ Japanese translation of the public and private documents listed below. Translated documents are accompanied by a translation certificate and an administrative scrivener’s certificate.",
+      text: "Waizumi Immigration Office accepts English ↔ Japanese and Chinese ↔ Japanese translation of the public and private documents listed below. Translated documents are accompanied by a translation certificate and an administrative scrivener’s certificate.",
     },
     {
       type: "p",
@@ -163,36 +163,36 @@ export const translation: ServiceDetail = {
 
     {
       type: "h2",
-      text: "How to apply for official seal confirmation / Apostille",
+      text: "Apostille support in Sapporo",
     },
     {
       type: "p",
-      text: "To obtain official seal confirmation or an Apostille, you either apply in person at the Ministry of Foreign Affairs headquarters in Tokyo, or apply by mail. There are three methods for application and receipt:",
+      text: "When Japanese documents must be submitted to an overseas authority, school, employer, or financial institution, an Apostille may be required. Depending on the document, a one-stop procedure may be available at a notary office in Sapporo.",
     },
     {
-      type: "ol",
+      type: "ul",
       items: [
-        "Apply at the counter and collect later at the counter (available from 9:00 a.m. on the next business day after application, excluding Saturdays, Sundays, and holidays).",
-        "Apply at the counter and receive later by mail (about 2–3 business days after application, excluding Saturdays, Sundays, and holidays).",
-        "Apply by mail and receive later by mail (about 10 days to 2 weeks from application/dispatch to receipt).",
+        "Notary authentication",
+        "Certification of the notary's seal by the Legal Affairs Bureau",
+        "Apostille or official seal confirmation by the Ministry of Foreign Affairs",
       ],
     },
     {
       type: "p",
-      text: "Mail application takes about two weeks. If you are in a hurry, we recommend going to the Ministry of Foreign Affairs headquarters in Tokyo and applying at the counter.",
+      text: "We confirm the destination country, receiving institution, and document type, then explain which certification is needed. We support Ministry of Foreign Affairs applications for public documents and notary-office procedures for private documents.",
     },
     {
       type: "p",
-      text: "For busy clients, our office also offers a service of traveling on your behalf. (Travel expenses and a daily allowance are charged separately.)",
+      text: "Please contact us if you are unsure whether an Apostille or official seal confirmation is needed, or whether a translation also requires certification.",
     },
     {
       type: "p",
-      text: "Both counter and mail applications are free of charge (Ministry fees).",
+      text: "The required certification method depends on the destination country, receiving institution, and document type. Some documents may not qualify for the Sapporo one-stop service.",
     },
 
     {
       type: "h2",
-      text: "Translation fees (English ↔ Japanese)",
+      text: "Translation fees (English ↔ Japanese / Chinese ↔ Japanese)",
     },
     {
       type: "ul",
@@ -231,12 +231,16 @@ export const translation: ServiceDetail = {
     },
     {
       type: "note",
+      text: "All fees are before tax.",
+    },
+    {
+      type: "note",
       text: "Family discount is available. Please inquire for specific amounts.",
     },
 
     {
       type: "h2",
-      text: "Authentication fee schedule (agency service)",
+      text: "Foreign-document certification and Apostille agency service — ¥15,000 (before tax)",
     },
     {
       type: "ul",
@@ -258,11 +262,7 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "翻訳・アポスティーユ・領事認証が必要な方…",
-    },
-    {
-      type: "p",
-      text: "行政書士わいずみともみ事務所の翻訳・認証サービスをご利用ください。",
+      text: "行政書士わいずみともみ事務所では、日本語・英語・中国語の翻訳、アポスティーユ、領事認証をサポートいたします。",
     },
 
     {
@@ -283,7 +283,7 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "行政書士わいずみともみ事務所では下記の公文書・私文書の翻訳（英語⇔日本語）を承ります。翻訳書類には翻訳証明書、行政書士の証明書をお付けします。",
+      text: "行政書士わいずみともみ事務所では下記の公文書・私文書の翻訳（英語⇔日本語、中国語⇔日本語）を承ります。翻訳書類には翻訳証明書、行政書士の証明書をお付けします。",
     },
     {
       type: "p",
@@ -406,40 +406,40 @@ export const translation: ServiceDetail = {
 
     {
       type: "h2",
-      text: "公印確認・アポスティーユの申請方法",
+      text: "アポスティーユ取得",
     },
     {
       type: "p",
-      text: "公印確認、アポスティーユを取得するには、東京の外務省本省で窓口申請をするか、郵便申請するかのいずれかになります。",
+      text: "海外の行政機関、学校、勤務先、金融機関などへ日本で発行・作成された書類を提出する際、アポスティーユの取得を求められることがあります。",
     },
     {
       type: "p",
-      text: "申請および受け取りには次の3つの方法があります。",
+      text: "札幌の公証役場でワンストップ手続が可能です。公証人による認証、法務局長による公証人押印証明、外務省によるアポスティーユまたは公印確認を公証役場でまとめて行える場合があります。",
     },
     {
-      type: "ol",
+      type: "ul",
       items: [
-        "窓口で申請して、後日、窓口で受け取る（申請日の翌日（土日祝を除く）午前9時から受け取れます）。",
-        "窓口で申請して、後日、郵便で受け取る（申請日の約2～3日後（土日祝を除く）に受け取れます）。",
-        "郵便で申請して、後日、郵便で受け取る（申請（発送）から受領までは約10日～2週間です）。",
+        "公証人による認証",
+        "法務局長による公証人押印証明",
+        "外務省によるアポスティーユまたは公印確認",
       ],
     },
     {
       type: "p",
-      text: "※郵便申請ですと２週間ほどかかります。お急ぎの方は、東京の外務本省に出向き、窓口申請をすることをお勧めします。",
+      text: "当事務所では、提出先の国・地域、提出機関、書類の種類を確認し、必要な認証方法をご案内します。公文書については外務省への申請を、私文書については公証役場での認証を含む手続をサポートします。",
     },
     {
       type: "p",
-      text: "お忙しいお客様のために当事務所が代わりに出張するサービスもございます。（旅費交通費、日当は別途頂戴いたします。）",
+      text: "「アポスティーユと公印確認のどちらが必要かわからない」「翻訳文にも認証が必要なのか」「どの書類を用意すればよいかわからない」といった場合にもご相談ください。",
     },
     {
-      type: "p",
-      text: "窓口申請、郵便申請いずれも手数料は無料です。",
+      type: "note",
+      text: "提出先の国・地域や機関によって必要な認証方法は異なります。書類の種類によっては公証役場のワンストップサービスを利用できない場合があります。",
     },
 
     {
       type: "h2",
-      text: "翻訳（英語⇔日本語）料金表",
+      text: "翻訳（英語⇔日本語・中国語⇔日本語）料金表",
     },
     {
       type: "ul",
@@ -478,12 +478,16 @@ export const translation: ServiceDetail = {
     },
     {
       type: "note",
+      text: "※全て税別料金です。",
+    },
+    {
+      type: "note",
       text: "ファミリー割引がございます。具体的な金額についてはお問い合わせください。",
     },
 
     {
       type: "h2",
-      text: "認証取得料金表（代行サービス）",
+      text: "外国文認証・アポスティーユ取得の代行サービス　15,000円（税別）",
     },
     {
       type: "ul",

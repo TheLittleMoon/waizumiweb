@@ -1,0 +1,53 @@
+import type { ServiceBlock, ServiceDetail } from "./types";
+
+const blocksJa = [
+  { type: "lead", text: "特定技能外国人の雇用を、最初の相談から在留資格申請まで" },
+  { type: "p", text: "人材がまだ決まっていなくてもご相談いただけます。提携する有料職業紹介事業者・登録支援機関と連携し、当事務所は在留資格申請を担当します。" },
+  { type: "h2", text: "このようなお悩みはありませんか" },
+  { type: "ul", items: ["外国人を採用したいが何から始めればよいかわからない", "特定技能で働ける人材を紹介してほしい", "自社が特定技能外国人を受け入れられるか確認したい", "必要書類や申請手続がわからない", "登録支援機関を含め受入れ後の支援体制を整えたい", "英語・中国語でのやり取りに不安がある"] },
+  { type: "h2", text: "採用の入口から申請まで相談できる体制" },
+  { type: "p", text: "採用候補者が決まる前から、対象業務、候補者探し、登録支援機関への委託、在留資格申請までの流れをご案内します。人材紹介は提携する有料職業紹介事業者、受入れ後の支援は提携する登録支援機関が担当し、当事務所は申請手続を担当します。" },
+  { type: "h2", text: "特定技能1号とは" },
+  { type: "p", text: "特定技能1号は、人手不足が認められる特定の産業分野で、一定の技能と日本語能力を持つ外国人が働くための在留資格です。制度や要件は改正されることがあるため、最新情報を確認しながらご案内します。" },
+  { type: "h2", text: "ご相談から就労開始までの流れ" },
+  { type: "ol", items: ["お問い合わせ", "初回ヒアリング", "人材紹介または候補者確認", "雇用条件と支援体制の確認", "申請書類の作成と提出", "許可後の受入れ"] },
+  { type: "h2", text: "よくあるご質問" },
+  { type: "h3", text: "採用する外国人がまだ決まっていなくても相談できますか" },
+  { type: "p", text: "はい。必要に応じて提携する有料職業紹介事業者へおつなぎします。" },
+  { type: "h3", text: "登録支援機関が決まっていません" },
+  { type: "p", text: "必要に応じて、提携する登録支援機関と連携できます。" },
+  { type: "h3", text: "英語や中国語で外国人本人に説明できますか" },
+  { type: "p", text: "はい。弊事務所は中国語、英語、日本語でのコミュニケーションが可能です。" },
+] satisfies ServiceBlock[];
+
+export const specifiedSkilledWorker: ServiceDetail = {
+  slug: "specified-skilled-worker",
+  titleEn: "Specified Skilled Worker No. 1",
+  titleJa: "特定技能1号",
+  blurbEn: "From the first hiring consultation through status-of-residence application.",
+  blurbJa: "外国人雇用の検討から人材紹介・支援・在留資格申請までをつなぎます",
+  references: [
+    { label: "Immigration Services Agency — Specified Skilled Worker system", href: "https://www.moj.go.jp/isa/applications/ssw/index.html" },
+    { label: "Immigration Services Agency — Support organizations", href: "https://www.moj.go.jp/isa/policies/ssw/supportssw.html" },
+  ],
+  blocks: [
+    { type: "lead", text: "From the first consultation about hiring a specified-skilled worker through the status-of-residence application." },
+    { type: "p", text: "You can consult us even before a candidate has been selected. Partner employment-placement businesses introduce candidates, partner registered support organizations provide post-arrival support, and our office handles the status-of-residence application." },
+    { type: "h2", text: "What can we help with?" },
+    { type: "ul", items: ["Understanding where to begin", "Connecting you with a partner employment-placement business", "Checking whether your company and role meet the requirements", "Preparing the application", "Connecting you with a partner registered support organization", "Communication in Japanese, English, and Chinese"] },
+    { type: "h2", text: "From recruitment planning to application" },
+    { type: "p", text: "We organize the full path from the proposed role and candidate search to support arrangements and filing. Each partner’s legal role is explained clearly." },
+    { type: "h2", text: "What is Specified Skilled Worker No. 1?" },
+    { type: "p", text: "It is a status of residence for foreign nationals with specified skills and Japanese ability working in designated industries with labour shortages. Requirements and operations can change, so we confirm the latest information for each consultation." },
+    { type: "h2", text: "Typical process" },
+    { type: "ol", items: ["Inquiry", "Initial hearing", "Candidate introduction or candidate review", "Employment conditions and support structure", "Application preparation and filing", "Acceptance after permission"] },
+    { type: "h2", text: "Frequently asked questions" },
+    { type: "h3", text: "Can we consult before we have chosen a candidate?" },
+    { type: "p", text: "Yes. When appropriate, we connect you with a partner employment-placement business." },
+    { type: "h3", text: "Can you help us find a registered support organization?" },
+    { type: "p", text: "Yes. When needed, we coordinate with a partner registered support organization." },
+    { type: "h3", text: "Can you explain the process in English or Chinese?" },
+    { type: "p", text: "Yes. Our office can communicate in Japanese, English, and Chinese." },
+  ],
+  blocksJa,
+};

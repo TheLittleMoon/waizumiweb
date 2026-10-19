@@ -8,11 +8,6 @@ export const dependent: ServiceDetail = {
   blurbJa: "日本に家族を呼ぶ",
   blocks: [
     {
-      type: "lead",
-      text: "If you want to bring family to Japan: the Dependent visa.",
-    },
-
-    {
       type: "h2",
       text: "What is the Dependent visa?",
     },
@@ -120,11 +115,6 @@ export const dependent: ServiceDetail = {
     },
   ],
   blocksJa: [
-    {
-      type: "lead",
-      text: "家族を日本に呼ぶなら家族滞在ビザ",
-    },
-
     {
       type: "h2",
       text: "家族滞在ビザとは",
