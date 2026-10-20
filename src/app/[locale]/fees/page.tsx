@@ -87,8 +87,10 @@ export default async function FeesPage({ params }: Props) {
                     <td className="py-4 pr-4 text-ink">
                       {pickLocalized(row, locale, "label")}
                     </td>
-                    <td className="py-4 pr-4 whitespace-nowrap text-ink">
-                      {row.fee}
+                    <td className="whitespace-pre-line py-4 pr-4 text-ink">
+                      {locale === "ja" && "feeJa" in row && row.feeJa
+                        ? row.feeJa
+                        : row.fee}
                     </td>
                   </tr>
                 ))}

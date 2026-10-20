@@ -18,15 +18,6 @@ export const translation: ServiceDetail = {
   ],
   blocks: [
     {
-      type: "lead",
-      text: "Translation / Apostille / Consular authentication.",
-    },
-    {
-      type: "p",
-      text: "Waizumi Immigration Office provides Japanese ↔ English ↔ Chinese translation, Apostille, and consular authentication support.",
-    },
-
-    {
       type: "h2",
       text: "Cases where translation and certification are needed",
     },
@@ -107,19 +98,6 @@ export const translation: ServiceDetail = {
 
     {
       type: "h3",
-      text: "Official seal confirmation (koin kakunin)",
-    },
-    {
-      type: "p",
-      text: "Certification by the Ministry of Foreign Affairs that is required in advance in order to obtain consular authentication by a consul at a foreign embassy or consulate in Japan.",
-    },
-    {
-      type: "p",
-      text: "The Ministry of Foreign Affairs certifies the official seal affixed on the public document. After official seal confirmation at the Ministry of Foreign Affairs, you obtain consular authentication at the foreign embassy or consulate in Japan.",
-    },
-
-    {
-      type: "h3",
       text: "Apostille",
     },
     {
@@ -167,7 +145,15 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "When Japanese documents must be submitted to an overseas authority, school, employer, or financial institution, an Apostille may be required. Depending on the document, a one-stop procedure may be available at a notary office in Sapporo.",
+      text: "When Japanese documents must be submitted to an overseas authority, school, employer, or financial institution, an Apostille may be required.",
+    },
+    {
+      type: "p",
+      text: "Previously, obtaining an Apostille for a private document required separate procedures: authentication at a notary office, certification of the notary's seal at the Legal Affairs Bureau, and an Apostille application to the Ministry of Foreign Affairs.",
+    },
+    {
+      type: "p",
+      text: "Today, notary offices in the Sapporo Legal Affairs Bureau jurisdiction in Hokkaido can use a one-stop service. For private documents, the following procedures can be completed together at the notary office.",
     },
     {
       type: "ul",
@@ -179,11 +165,27 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "We confirm the destination country, receiving institution, and document type, then explain which certification is needed. We support Ministry of Foreign Affairs applications for public documents and notary-office procedures for private documents.",
+      text: "As a result, it is no longer necessary to visit the Legal Affairs Bureau or Ministry of Foreign Affairs separately, or to apply to the Ministry of Foreign Affairs by post, making the process smoother in Hokkaido.",
+    },
+    {
+      type: "h3",
+      text: "Leave it to our office",
     },
     {
       type: "p",
-      text: "Please contact us if you are unsure whether an Apostille or official seal confirmation is needed, or whether a translation also requires certification.",
+      text: "We confirm the destination country or region, receiving institution, and document type, then explain which certification method is required.",
+    },
+    {
+      type: "p",
+      text: "For public documents, we handle the Apostille application to the Ministry of Foreign Affairs. For private documents, we handle the one-stop procedure, including notary-office authentication, on your behalf.",
+    },
+    {
+      type: "p",
+      text: "Please feel free to contact us if you are unsure whether an Apostille or official seal confirmation is needed, whether a translation also requires certification, or which documents to prepare.",
+    },
+    {
+      type: "p",
+      text: "An administrative scrivener supports the complete process, from checking the documents through application and obtaining the certification.",
     },
     {
       type: "p",
@@ -244,15 +246,6 @@ export const translation: ServiceDetail = {
     },
   ],
   blocksJa: [
-    {
-      type: "lead",
-      text: "翻訳/アポスティーユ/領事認証",
-    },
-    {
-      type: "p",
-      text: "行政書士わいずみともみ事務所では、日本語・英語・中国語の翻訳、アポスティーユ、領事認証をサポートいたします。",
-    },
-
     {
       type: "h2",
       text: "翻訳・認証が必要となるケース",
@@ -338,19 +331,6 @@ export const translation: ServiceDetail = {
 
     {
       type: "h3",
-      text: "公印確認",
-    },
-    {
-      type: "p",
-      text: "日本にある外国の大使館・（総）領事館の領事による認証（領事認証）を取得するために事前に必要となる外務省の証明のことです。",
-    },
-    {
-      type: "p",
-      text: "外務省では公文書上に押印されている公印についてその公文書上に証明を行っています。外務省で公印確認を受けた後は日本にある外国の大使館・（総）領事館の領事認証を取得します。",
-    },
-
-    {
-      type: "h3",
       text: "アポスティーユ",
     },
     {
@@ -402,7 +382,11 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "札幌の公証役場でワンストップ手続が可能です。公証人による認証、法務局長による公証人押印証明、外務省によるアポスティーユまたは公印確認を公証役場でまとめて行える場合があります。",
+      text: "以前までは、私文書にアポスティーユを取得する場合には、公証役場での認証、法務局での公証人押印証明、外務省へのアポスティーユ申請を、それぞれ個別に行う必要がありました。",
+    },
+    {
+      type: "p",
+      text: "現在、北海道内の札幌法務局管区にある公証役場では、「ワンストップサービス」を利用できます。これにより、私文書については、次の手続を公証役場でまとめて行うことができます。",
     },
     {
       type: "ul",
@@ -414,11 +398,27 @@ export const translation: ServiceDetail = {
     },
     {
       type: "p",
-      text: "当事務所では、提出先の国・地域、提出機関、書類の種類を確認し、必要な認証方法をご案内します。公文書については外務省への申請を、私文書については公証役場での認証を含む手続をサポートします。",
+      text: "そのため、法務局や外務省へ個別に出向いたり、外務省へ郵送申請をしたりする必要がなくなり、北海道内でも、より円滑に手続を進めることができるようになりました。",
+    },
+    {
+      type: "h3",
+      text: "当事務所にお任せください",
     },
     {
       type: "p",
-      text: "「アポスティーユと公印確認のどちらが必要かわからない」「翻訳文にも認証が必要なのか」「どの書類を用意すればよいかわからない」といった場合にもご相談ください。",
+      text: "当事務所では、提出先の国・地域、提出機関および書類の種類を確認したうえで、必要となる認証方法をご案内します。",
+    },
+    {
+      type: "p",
+      text: "公文書については外務省へのアポスティーユ申請を、私文書については公証役場での認証を含むワンストップ手続を、お客様に代わって行います。",
+    },
+    {
+      type: "p",
+      text: "「アポスティーユと公印確認のどちらが必要か分からない」「翻訳文にも認証が必要なのか」「どの書類を用意すればよいか分からない」といった場合にも、まずはお気軽にご相談ください。",
+    },
+    {
+      type: "p",
+      text: "書類の確認から申請、取得まで、行政書士が一連の手続きをサポートいたします。",
     },
     {
       type: "note",

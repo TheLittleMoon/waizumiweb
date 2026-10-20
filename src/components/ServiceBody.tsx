@@ -65,6 +65,47 @@ function BlockList({
                 {block.text}
               </p>
             );
+          case "table":
+            return (
+              <div key={i} className="overflow-x-auto rounded-xl ring-1 ring-line">
+                <table className="min-w-full border-collapse text-left text-sm">
+                  <thead className="bg-paper-warm text-ink">
+                    <tr>
+                      {block.headers.map((header) => (
+                        <th key={header} className="border-b border-line px-4 py-3 font-medium">
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {block.rows.map((row, rowIndex) => (
+                      <tr key={rowIndex} className="align-top even:bg-paper-warm/50">
+                        {row.map((cell, cellIndex) => (
+                          <td key={cellIndex} className="border-b border-line px-4 py-3 text-ink-soft last:border-b-0">
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            );
+          case "flow":
+            return (
+                <div key={i} className="grid gap-3 md:grid-cols-4">
+                {block.nodes.map((node, nodeIndex) => (
+                  <div key={node.label} className="relative rounded-xl border border-line bg-paper-warm/70 px-4 py-4 text-center">
+                    <p className="font-logo text-sm text-ink">{node.label}</p>
+                    <p className="mt-2 text-sm text-ink-soft">{node.detail}</p>
+                    {nodeIndex < block.nodes.length - 1 ? (
+                      <span aria-hidden className="absolute -right-3 top-1/2 hidden -translate-y-1/2 text-xl text-rose-deep md:block">→</span>
+                    ) : null}
+                  </div>
+                ))}
+              </div>
+            );
           case "ul":
             return (
               <ul key={i} className="list-disc space-y-2 pl-5">
@@ -126,8 +167,32 @@ export function ServiceBody({
   locale: Locale;
 }) {
   const { intro, sections } = groupBlocks(blocks);
+  const finalOrder = [
+    "From consultation to starting work",
+    "ご相談から就労開始までの流れ",
+    "Why consult our office",
+    "当事務所に相談するメリット",
+    "Frequently asked questions",
+    "よくあるご質問",
+  ];
+  const finalSections = sections.filter((section) =>
+    finalOrder.includes(section.title),
+  );
+  const firstFinalIndex = sections.findIndex((section) =>
+    finalOrder.includes(section.title),
+  );
+  const orderedSections =
+    firstFinalIndex === -1
+      ? sections
+      : [
+          ...sections.slice(0, firstFinalIndex).filter((section) => !finalOrder.includes(section.title)),
+          ...finalOrder
+            .map((title) => finalSections.find((section) => section.title === title))
+            .filter((section): section is Section => Boolean(section)),
+          ...sections.slice(firstFinalIndex).filter((section) => !finalOrder.includes(section.title)),
+        ];
   const [open, setOpen] = useState<Record<number, boolean>>(() =>
-    Object.fromEntries(sections.map((_, i) => [i, i === 0])),
+    Object.fromEntries(orderedSections.map((_, i) => [i, i === 0])),
   );
 
   return (
@@ -135,13 +200,12 @@ export function ServiceBody({
       {intro.length > 0 ? <BlockList blocks={intro} locale={locale} /> : null}
 
       <div className="space-y-3">
-        {sections.map((section, i) => {
+        {orderedSections.map((section, i) => {
           const isOpen = open[i] ?? false;
+          const isFaq = section.title === "よくあるご質問" || section.title === "Frequently asked questions";
           return (
-            <div
-              key={section.title}
-              className="overflow-hidden rounded-2xl bg-rose/15 ring-1 ring-rose/20"
-            >
+            <div key={section.title}>
+              <div className="overflow-hidden rounded-2xl bg-rose/15 ring-1 ring-rose/20">
               <button
                 type="button"
                 aria-expanded={isOpen}
@@ -165,6 +229,17 @@ export function ServiceBody({
               {isOpen ? (
                 <div className="border-t border-rose/20 px-5 py-5">
                   <BlockList blocks={section.blocks} locale={locale} />
+                </div>
+              ) : null}
+              </div>
+              {isFaq ? (
+                <div className="mt-6 text-center">
+                  <Link
+                    href={localePath(locale, "/contact")}
+                    className="inline-flex rounded-full bg-rose-deep px-7 py-3 text-base text-white transition hover:bg-rose"
+                  >
+                    {locale === "ja" ? "特定技能について相談する" : "Talk to us about specified-skilled-worker hiring"}
+                  </Link>
                 </div>
               ) : null}
             </div>

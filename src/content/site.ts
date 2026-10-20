@@ -352,7 +352,7 @@ export const fees = {
     "表示金額はすべて税別です。",
     "ご来所、WEB会議（ZOOM等）によるご相談を承っております（要予約）。",
     "ご相談後に正式に業務をご依頼いただいた場合は、お支払いいただいた相談料を報酬額から差し引きます。",
-    "万一、不許可の場合は無料で1回まで再申請いたします（不許可時点から6か月以内の申請に限る）。",
+    "万一、不許可の場合は無料で１回まで再申請いたします（※不許可時点から6ヶ月以内の申請に限る）。",
     "着手金（2分の1）、成功報酬金（2分の1）にてご請求いたします。",
     "帰化許可申請及び永住許可申請は着手金（2分の1）、申請完了時（2分の1）にてご請求いたします。",
     "印紙代及び実費（郵便代等）は手続き終了後にご請求いたします。",
@@ -398,7 +398,13 @@ export const fees = {
         { labelEn: "Change of status", labelJa: "在留資格変更許可申請（現在とは異なるビザに変更する）", fee: "¥100,000 (construction: ¥200,000)" },
         { labelEn: "Extension of period of stay", labelJa: "在留期間更新許可申請（現在のビザを延長する）", fee: "¥50,000" },
         { labelEn: "First specified-skilled-worker hire, one person", labelJa: "特定技能を初めて1名のみ受け入れる場合", fee: "¥150,000 (construction: ¥250,000)" },
-        { labelEn: "Cancellation policy after work begins", labelJa: "キャンセルポリシー（業務着手後）", fee: "Company: full fee / Applicant before filing: half / Applicant after filing: full fee" },
+        {
+          labelEn: "Cancellation policy after work begins",
+          labelJa: "キャンセルポリシー（業務着手後）",
+          fee: "Company: full fee\nApplicant before filing: half\nApplicant after filing: full fee",
+          feeJa:
+            "※キャンセルポリシー（業務着手後）\n特定技能所属機関（企業様）都合：報酬の全額をご請求\n申請人（外国人の方）都合：入管への申請前、報酬の半額をご請求\n申請人（外国人の方）都合：入管への申請後、報酬の全額をご請求",
+        },
       ],
     },
     {
@@ -413,7 +419,7 @@ export const fees = {
       titleEn: "Business Manager",
       titleJa: "経営・管理",
       rows: [
-        { labelEn: "Certificate of Eligibility", labelJa: "在留資格認定証明書交付申請", fee: "¥250,000+ (quote based on workload)" },
+        { labelEn: "Certificate of Eligibility (invite from overseas)", labelJa: "在留資格認定証明書交付申請（海外から外国人を招へいする）", fee: "¥250,000+ (quote based on workload)" },
         { labelEn: "Change of status", labelJa: "在留資格変更許可申請", fee: "¥250,000+ (quote based on workload)" },
         { labelEn: "Extension of period of stay", labelJa: "在留期間更新許可申請", fee: "¥100,000+ (quote based on workload)" },
       ],

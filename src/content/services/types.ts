@@ -11,7 +11,16 @@ export type ServiceBlock =
       href: string;
       external?: boolean;
     }
-  | { type: "note"; text: string };
+  | { type: "note"; text: string }
+  | {
+      type: "table";
+      headers: string[];
+      rows: string[][];
+    }
+  | {
+      type: "flow";
+      nodes: { label: string; detail: string }[];
+    };
 
 export type ServiceReference = {
   label: string;
@@ -24,6 +33,10 @@ export type ServiceDetail = {
   titleJa: string;
   blurbEn: string;
   blurbJa: string;
+  metaTitleEn?: string;
+  metaTitleJa?: string;
+  metaDescriptionEn?: string;
+  metaDescriptionJa?: string;
   /** Official / government sources cited on the original pages — not the old Wix URL */
   references?: ServiceReference[];
   /** English body (accordion sections) */

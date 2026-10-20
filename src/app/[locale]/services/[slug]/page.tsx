@@ -68,8 +68,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const service = getServiceBySlug(slug);
   if (!service) return {};
   return {
-    title: pickLocalized(service, raw, "title"),
-    description: pickLocalized(service, raw, "blurb"),
+    title:
+      raw === "ja"
+        ? service.metaTitleJa ?? pickLocalized(service, raw, "title")
+        : service.metaTitleEn ?? pickLocalized(service, raw, "title"),
+    description:
+      raw === "ja"
+        ? service.metaDescriptionJa ?? pickLocalized(service, raw, "blurb")
+        : service.metaDescriptionEn ?? pickLocalized(service, raw, "blurb"),
   };
 }
 
@@ -82,9 +88,64 @@ export default async function ServiceDetailPage({ params }: Props) {
 
   const others = serviceDetails.filter((s) => s.slug !== service.slug);
   const references = collectReferences(service);
+  const structuredData =
+    service.slug === "specified-skilled-worker"
+      ? {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "LegalService",
+              name: locale === "ja" ? service.titleJa : service.titleEn,
+              description:
+                locale === "ja"
+                  ? service.metaDescriptionJa
+                  : service.metaDescriptionEn,
+              telephone: "+81-11-206-1025",
+              areaServed: "Sapporo, Hokkaido, Japan",
+              url: `https://waizumiweb.vercel.app/${locale}/services/${service.slug}`,
+            },
+            {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: t(locale, "servicesEyebrow"), item: `https://waizumiweb.vercel.app/${locale}/services` },
+                { "@type": "ListItem", position: 2, name: pickLocalized(service, locale, "title"), item: `https://waizumiweb.vercel.app/${locale}/services/${service.slug}` },
+              ],
+            },
+            {
+              "@type": "FAQPage",
+              mainEntity: (locale === "ja"
+                ? [
+                    ["採用する外国人がまだ決まっていなくても相談できますか", "はい。必要に応じて提携する有料職業紹介事業者へおつなぎします。"],
+                    ["登録支援機関が決まっていません", "必要に応じて、提携する登録支援機関と連携できます。"],
+                    ["外国人本人が海外にいても申請できますか", "はい。外国人本人が海外にいても申請できます。"],
+                    ["技能実習から特定技能へ変更できますか", "技能実習の職種・作業と希望する特定技能分野などを確認し、個別に判断します。"],
+                    ["会社側にはどのような条件がありますか", "適切な雇用契約、法令遵守、報酬額、支援体制などの基準があります。"],
+                    ["申請すれば必ず許可されますか", "許可を保証することはできません。事実関係と要件を確認して申請します。"],
+                    ["英語や中国語で外国人本人に説明できますか", "はい。中国語、英語、日本語でのコミュニケーションが可能です。"],
+                  ]
+                : [
+                    ["Can we consult before choosing a candidate?", "Yes. We can connect you with a partner employment-placement business."],
+                    ["Can we apply while the foreign national is overseas?", "Yes. The application is generally a Certificate of Eligibility application."],
+                    ["Does filing guarantee permission?", "No. Permission cannot be guaranteed."],
+                    ["Can you explain the process in English or Chinese?", "Yes. Our office communicates in Japanese, English, and Chinese."],
+                  ]).map(([question, answer]) => ({
+                "@type": "Question",
+                name: question,
+                acceptedAnswer: { "@type": "Answer", text: answer },
+              })),
+            },
+          ],
+        }
+      : null;
 
   return (
     <>
+      {structuredData ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      ) : null}
       <section className="border-b border-line px-5 pb-12 pt-32 md:px-8">
         <div className="mx-auto max-w-3xl">
           <p className="text-xs tracking-[0.2em] text-rose-deep uppercase">
@@ -165,6 +226,23 @@ export default async function ServiceDetailPage({ params }: Props) {
           </p>
         </div>
       </section>
+
+      {service.slug === "specified-skilled-worker" ? (
+        <div className="fixed inset-x-0 bottom-0 z-30 flex gap-2 border-t border-line bg-paper/95 p-3 shadow-[0_-4px_20px_rgba(54,39,47,0.12)] backdrop-blur md:hidden">
+          <Link
+            href={localePath(locale, "/contact")}
+            className="flex-1 rounded-full bg-rose-deep px-3 py-3 text-center text-sm font-medium text-white"
+          >
+            {locale === "ja" ? "相談する" : "Consult"}
+          </Link>
+          <a
+            href="tel:0112061025"
+            className="flex-1 rounded-full border border-rose-deep px-3 py-3 text-center text-sm font-medium text-rose-deep"
+          >
+            {locale === "ja" ? "電話する" : "Call"}
+          </a>
+        </div>
+      ) : null}
 
       <CtaBand locale={locale} />
     </>

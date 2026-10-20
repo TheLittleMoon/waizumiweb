@@ -111,7 +111,7 @@ export const naturalization: ServiceDetail = {
     },
     {
       type: "h3",
-      text: "② Interview at the Legal Affairs Bureau (free accompaniment)",
+      text: "② Interview at the Legal Affairs Bureau (free!)",
     },
     {
       type: "p",
@@ -131,7 +131,7 @@ export const naturalization: ServiceDetail = {
     },
     {
       type: "p",
-      text: "We gather the required documents and prepare the full set of application documents. English → Japanese translation is done in-house at our office. (Translation from languages other than English is outsourced.)",
+      text: "We gather the required documents and prepare the full set of application documents. English → Japanese or Chinese → Japanese translation is done in-house at our office. (Translations from languages other than English or Chinese are outsourced.)",
     },
     {
       type: "h3",
@@ -139,7 +139,7 @@ export const naturalization: ServiceDetail = {
     },
     {
       type: "p",
-      text: "When all documents are ready, we make an appointment and go to the Legal Affairs Bureau to submit the application. (We can accompany you if you wish.)",
+      text: "When all documents are ready, we make an appointment and go to the Legal Affairs Bureau to submit the application. (The remaining balance is paid before filing.)",
     },
     {
       type: "h3",
@@ -303,11 +303,11 @@ export const naturalization: ServiceDetail = {
     },
     {
       type: "p",
-      text: "英語⇒日本語への翻訳は当事務所でいたします。",
+      text: "英語⇒日本語または中国語⇒日本語への翻訳は当事務所でいたします。",
     },
     {
       type: "p",
-      text: "（英語以外の翻訳は外部委託となります。）",
+      text: "（上記以外の翻訳は外部委託となります。）",
     },
     {
       type: "h3",
@@ -319,7 +319,7 @@ export const naturalization: ServiceDetail = {
     },
     {
       type: "p",
-      text: "（ご希望があれば同行します）",
+      text: "（申請の前に残金をお支払いいただきます。）",
     },
     {
       type: "h3",

@@ -53,8 +53,10 @@ export const dependent: ServiceDetail = {
       text: "Parents are not included among Dependents. When inviting an elderly parent in the foreign national’s home country to Japan, it may be possible to obtain the status “Designated Activities.”",
     },
     {
-      type: "note",
-      text: "Certificate of Eligibility (COE) application — please inquire for details and required forms.",
+      type: "link",
+      label: "Official Immigration Services Agency information: Certificate of Eligibility application for Dependents",
+      href: "https://www.moj.go.jp/isa/applications/status/dependent.html",
+      external: true,
     },
 
     {
@@ -169,8 +171,10 @@ export const dependent: ServiceDetail = {
       text: "外国人の本国にいる老齢の親を日本に呼び寄せる場合は、「特定活動」の在留資格を取得できる可能性があります。",
     },
     {
-      type: "note",
-      text: "➡在留資格認定証明書交付申請はこちら",
+      type: "link",
+      label: "➡在留資格認定証明書交付申請はこちら",
+      href: "https://www.moj.go.jp/isa/applications/status/dependent.html",
+      external: true,
     },
 
     {
