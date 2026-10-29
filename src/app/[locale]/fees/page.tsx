@@ -38,7 +38,11 @@ export default async function FeesPage({ params }: Props) {
           {t(locale, "consulting")}
         </h2>
         <div className="mt-6 overflow-x-auto">
-          <table className="w-full min-w-[28rem] text-left text-sm">
+          <table className="w-full min-w-[28rem] table-fixed text-left text-sm">
+            <colgroup>
+              <col className="w-[68%]" />
+              <col className="w-[32%]" />
+            </colgroup>
             <thead>
               <tr className="border-b border-line text-xs tracking-[0.14em] text-mute uppercase">
                 <th className="py-3 pr-4 font-medium">
@@ -70,7 +74,11 @@ export default async function FeesPage({ params }: Props) {
             {pickLocalized(section, locale, "title")}
           </h2>
           <div className="mt-6 overflow-x-auto">
-            <table className="w-full min-w-[36rem] text-left text-sm">
+            <table className="w-full min-w-[36rem] table-fixed text-left text-sm">
+              <colgroup>
+                <col className="w-[68%]" />
+                <col className="w-[32%]" />
+              </colgroup>
               <thead>
                 <tr className="border-b border-line text-xs tracking-[0.14em] text-mute uppercase">
                   <th className="py-3 pr-4 font-medium">
@@ -87,7 +95,7 @@ export default async function FeesPage({ params }: Props) {
                     <td className="py-4 pr-4 text-ink">
                       {pickLocalized(row, locale, "label")}
                     </td>
-                    <td className="whitespace-pre-line py-4 pr-4 text-ink">
+                    <td className="whitespace-pre-line break-words py-4 pr-4 text-ink">
                       {locale === "ja" && "feeJa" in row && row.feeJa
                         ? row.feeJa
                         : row.fee}
