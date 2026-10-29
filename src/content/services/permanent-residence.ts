@@ -8,12 +8,16 @@ export const permanentResidence: ServiceDetail = {
   blurbJa: "日本にずっと住む",
   references: [
     {
-      label: "Guidelines on permission for permanent residence (Immigration Services Agency; revised 24 Feb 2026)",
-      href: "https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan50.html",
+      label: "Guidelines on permission for permanent residence (Immigration Services Agency; revised 1 Oct 2026)",
+      href: "https://www.moj.go.jp/isa/10_00279",
     },
     {
       label: "Immigration Services Agency of Japan",
       href: "https://www.moj.go.jp/isa/",
+    },
+    {
+      label: "Guidelines on cancellation of Permanent Resident status (effective 1 Apr 2027)",
+      href: "https://www.moj.go.jp/isa/deportation/resources/nyukan_nyukan85_00002.html",
     },
   ],
   blocks: [
@@ -57,7 +61,15 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "note",
-      text: "Under the national-interest requirement, applicants are generally expected to hold the longest period of stay available for their current status. From 1 April 2027, treating a 3-year period of stay as “longest” ends in principle (with limited transitional handling). Confirm the latest Guidelines on permission for permanent residence before applying.",
+      text: "Under the national-interest requirement, applicants are generally expected to hold the longest period of stay available for their current status. For applications filed by 31 March 2027, a 3-year period is treated as the longest period. After 1 April 2027, this treatment remains only for the limited transitional cases described in the official guideline. Confirm the latest guideline before applying.",
+    },
+    {
+      type: "note",
+      text: "The independent-livelihood review considers household income, household size, current and expected future income, assets, and skills. In principle, the household income is considered against the average income level for Japanese households of the same size.",
+    },
+    {
+      type: "note",
+      text: "The national-interest review also considers whether the applicant has properly fulfilled public and immigration-law obligations, including tax, pension, health-insurance, address-notification, and residence-card obligations, and has not engaged in activities outside the permitted status.",
     },
     {
       type: "link",
@@ -112,7 +124,22 @@ export const permanentResidence: ServiceDetail = {
     {
       type: "link",
       label: "Guidelines on permission for permanent residence (Ministry of Justice)",
-      href: "https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan50.html",
+      href: "https://www.moj.go.jp/isa/10_00279",
+      external: true,
+    },
+
+    {
+      type: "h2",
+      text: "Important changes from 1 April 2027",
+    },
+    {
+      type: "p",
+      text: "The Immigration Services Agency will begin operating new guidelines on cancellation of Permanent Resident status from 1 April 2027. Certain serious failures to comply with immigration-law obligations, deliberate non-payment of public charges despite the ability to pay, and certain serious criminal conduct may be considered. Decisions are made with regard to individual circumstances; this is not an automatic cancellation in every case.",
+    },
+    {
+      type: "link",
+      label: "Guidelines on cancellation of Permanent Resident status (Immigration Services Agency)",
+      href: "https://www.moj.go.jp/isa/deportation/resources/nyukan_nyukan85_00002.html",
       external: true,
     },
 
@@ -230,7 +257,15 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "note",
-      text: "国益要件では、原則として現に有する在留資格について定められた最長の在留期間をもって在留していることが求められます。在留期間「3年」を最長とみなす取扱いは、令和9年（2027年）4月1日以降、原則として終了します（経過措置あり）。申請前に最新の「永住許可に関するガイドライン」をご確認ください。",
+      text: "国益要件では、原則として現に有する在留資格について定められた最長の在留期間をもって在留していることが求められます。令和9年（2027年）3月31日までの申請では、在留期間「3年」を最長の在留期間として扱います。令和9年（2027年）4月1日以降は、公式ガイドラインに記載された限定的な経過措置の場合に限り、この取扱いが残ります。申請前に最新のガイドラインをご確認ください。",
+    },
+    {
+      type: "note",
+      text: "独立生計要件では、世帯人数、現在および将来に見込まれる収入、資産、技能などが考慮されます。原則として、世帯年収が世帯人数に応じた日本人世帯の平均収入を上回る水準に継続して達しているかが考慮されます。",
+    },
+    {
+      type: "note",
+      text: "国益要件では、納税、公的年金・公的医療保険料、住居地の届出、在留カードの再交付・携帯・提示など、法令上の公的義務を適正に履行しているか、また許可された活動以外の活動をしていないかも考慮されます。",
     },
     {
       type: "link",
@@ -285,7 +320,22 @@ export const permanentResidence: ServiceDetail = {
     {
       type: "link",
       label: "永住許可に関するガイドライン",
-      href: "https://www.moj.go.jp/isa/applications/resources/nyukan_nyukan50.html",
+      href: "https://www.moj.go.jp/isa/10_00279",
+      external: true,
+    },
+
+    {
+      type: "h2",
+      text: "令和9年（2027年）4月1日からの重要な変更",
+    },
+    {
+      type: "p",
+      text: "出入国在留管理庁は、令和9年（2027年）4月1日から、永住者の在留資格の取消しに関する新しいガイドラインの運用を開始します。入管法上の義務に対する重大な違反、支払能力があるにもかかわらず公租公課を故意に支払わない場合、一定の重大な犯罪行為などが考慮される場合があります。個別事情を踏まえて判断され、すべての場合に自動的に取り消される制度ではありません。",
+    },
+    {
+      type: "link",
+      label: "永住者の在留資格の取消しに関するガイドライン（出入国在留管理庁）",
+      href: "https://www.moj.go.jp/isa/deportation/resources/nyukan_nyukan85_00002.html",
       external: true,
     },
 

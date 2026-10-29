@@ -85,7 +85,7 @@ export const translation: ServiceDetail = {
 
     {
       type: "h2",
-      text: "What are official seal confirmation and Apostille?",
+      text: "What is official seal confirmation?",
     },
     {
       type: "p",
@@ -97,8 +97,8 @@ export const translation: ServiceDetail = {
     },
 
     {
-      type: "h3",
-      text: "Apostille",
+      type: "h2",
+      text: "What is an Apostille?",
     },
     {
       type: "p",
@@ -111,6 +111,10 @@ export const translation: ServiceDetail = {
     {
       type: "p",
       text: "Obtaining an Apostille allows the document to be used in the destination country as equivalent to one bearing consular authentication from the embassy or consulate in Japan.",
+    },
+    {
+      type: "p",
+      text: "When Japanese documents must be submitted to an overseas authority, school, employer, or financial institution, an Apostille may be required.",
     },
     {
       type: "note",
@@ -129,47 +133,7 @@ export const translation: ServiceDetail = {
 
     {
       type: "h2",
-      text: "Flow for obtaining official seal confirmation / Apostille",
-    },
-    {
-      type: "ol",
-      items: [
-        "Confirm whether the destination is a Hague Convention contracting state or a non-contracting state",
-        "Confirm using the flowchart for official seal confirmation / Apostille",
-      ],
-    },
-
-    {
-      type: "h2",
-      text: "Apostille support in Sapporo",
-    },
-    {
-      type: "p",
-      text: "When Japanese documents must be submitted to an overseas authority, school, employer, or financial institution, an Apostille may be required.",
-    },
-    {
-      type: "p",
-      text: "Previously, obtaining an Apostille for a private document required separate procedures: authentication at a notary office, certification of the notary's seal at the Legal Affairs Bureau, and an Apostille application to the Ministry of Foreign Affairs.",
-    },
-    {
-      type: "p",
-      text: "Today, notary offices in the Sapporo Legal Affairs Bureau jurisdiction in Hokkaido can use a one-stop service. For private documents, the following procedures can be completed together at the notary office.",
-    },
-    {
-      type: "ul",
-      items: [
-        "Notary authentication",
-        "Certification of the notary's seal by the Legal Affairs Bureau",
-        "Apostille or official seal confirmation by the Ministry of Foreign Affairs",
-      ],
-    },
-    {
-      type: "p",
-      text: "As a result, it is no longer necessary to visit the Legal Affairs Bureau or Ministry of Foreign Affairs separately, or to apply to the Ministry of Foreign Affairs by post, making the process smoother in Hokkaido.",
-    },
-    {
-      type: "h3",
-      text: "Leave it to our office",
+      text: "If you are unsure about translation or certification procedures, leave it to our office",
     },
     {
       type: "p",
@@ -192,58 +156,6 @@ export const translation: ServiceDetail = {
       text: "The required certification method depends on the destination country, receiving institution, and document type. Some documents may not qualify for the Sapporo one-stop service.",
     },
 
-    {
-      type: "h2",
-      text: "Translation fees (English ↔ Japanese / Chinese ↔ Japanese)",
-    },
-    {
-      type: "ul",
-      items: [
-        "Family register — all matters certificate / partial matters certificate: from 7,000 yen per sheet",
-        "Family register extract / abstract (vertical writing / handwritten): from 12,000 yen per page",
-        "Removed family register extract: from 7,000 yen",
-        "Residence certificate: from 6,000 yen",
-        "Driver’s license: front only 4,000 yen; both sides 6,000 yen",
-        "Student ID: front only 4,000 yen",
-        "Bank passbook — facing page (account number, account holder name, etc.): 5,000 yen",
-        "Bank passbook — transaction detail page: 5,000 yen per page",
-        "Balance certificate: 5,000 yen",
-        "Graduation certificate: 5,000 yen",
-        "Academic transcript: from 9,000 yen",
-        "Certificate of legal capacity to marry: 7,000 yen",
-        "Certificate of acceptance of marriage / divorce / birth: 5,000 yen",
-        "Birth notification / birth certificate: 5,000 yen",
-        "Death notification: 7,000 yen",
-        "Death certificate / postmortem certificate: from 9,000 yen",
-        "Withholding tax slip: 6,000 yen per sheet",
-        "Tax payment certificate: from 6,000 yen",
-        "Final tax return: 10,000 yen per sheet",
-        "Utility bills and statements: 6,000–8,000 yen",
-        "Certificate of employment: 5,000 yen",
-        "Employment contract: 8,000 yen per page",
-        "Company registry / historical matters certificate: from 10,000 yen",
-        "Real estate registry: 8,000 yen per page",
-        "Company articles of incorporation: 8,000 yen per page",
-        "Translation certificate / administrative scrivener certificate: 3,000 yen",
-      ],
-    },
-    {
-      type: "p",
-      text: "We also accept translation of documents other than those listed above.",
-    },
-    {
-      type: "note",
-      text: "All fees are before tax.",
-    },
-    {
-      type: "note",
-      text: "Family discount is available. Please inquire for specific amounts.",
-    },
-
-    {
-      type: "h2",
-      text: "Foreign-document certification and Apostille agency service — ¥15,000 (before tax)",
-    },
   ],
   blocksJa: [
     {
@@ -318,7 +230,7 @@ export const translation: ServiceDetail = {
 
     {
       type: "h2",
-      text: "公印確認、アポスティーユとは？",
+      text: "公印確認とは？",
     },
     {
       type: "p",
@@ -330,8 +242,8 @@ export const translation: ServiceDetail = {
     },
 
     {
-      type: "h3",
-      text: "アポスティーユ",
+      type: "h2",
+      text: "アポスティーユとは？",
     },
     {
       type: "p",
@@ -344,6 +256,10 @@ export const translation: ServiceDetail = {
     {
       type: "p",
       text: "アポスティーユを取得すると日本にある大使館・（総）領事館の領事認証があるものと同等のものとして、提出先国で使用することができます。",
+    },
+    {
+      type: "p",
+      text: "海外の行政機関、学校、勤務先、金融機関などへ日本で発行・作成された書類を提出する際、アポスティーユの取得を求められることがあります。",
     },
     {
       type: "note",
@@ -362,47 +278,7 @@ export const translation: ServiceDetail = {
 
     {
       type: "h2",
-      text: "公印確認・アポスティーユ取得の流れ",
-    },
-    {
-      type: "ol",
-      items: [
-        "ハーグ条約締約国 or 非締約国の確認",
-        "下記のフローチャートで確認",
-      ],
-    },
-
-    {
-      type: "h2",
-      text: "アポスティーユ取得",
-    },
-    {
-      type: "p",
-      text: "海外の行政機関、学校、勤務先、金融機関などへ日本で発行・作成された書類を提出する際、アポスティーユの取得を求められることがあります。",
-    },
-    {
-      type: "p",
-      text: "以前までは、私文書にアポスティーユを取得する場合には、公証役場での認証、法務局での公証人押印証明、外務省へのアポスティーユ申請を、それぞれ個別に行う必要がありました。",
-    },
-    {
-      type: "p",
-      text: "現在、北海道内の札幌法務局管区にある公証役場では、「ワンストップサービス」を利用できます。これにより、私文書については、次の手続を公証役場でまとめて行うことができます。",
-    },
-    {
-      type: "ul",
-      items: [
-        "公証人による認証",
-        "法務局長による公証人押印証明",
-        "外務省によるアポスティーユまたは公印確認",
-      ],
-    },
-    {
-      type: "p",
-      text: "そのため、法務局や外務省へ個別に出向いたり、外務省へ郵送申請をしたりする必要がなくなり、北海道内でも、より円滑に手続を進めることができるようになりました。",
-    },
-    {
-      type: "h3",
-      text: "当事務所にお任せください",
+      text: "翻訳・認証の手続きでお迷いの方は、当事務所にお任せください",
     },
     {
       type: "p",
@@ -425,57 +301,5 @@ export const translation: ServiceDetail = {
       text: "提出先の国・地域や機関によって必要な認証方法は異なります。書類の種類によっては公証役場のワンストップサービスを利用できない場合があります。",
     },
 
-    {
-      type: "h2",
-      text: "翻訳（英語⇔日本語・中国語⇔日本語）料金表",
-    },
-    {
-      type: "ul",
-      items: [
-        "戸籍　全部事項証明書・一部事項証明書 7,000円/枚",
-        "戸籍謄本・戸籍抄本（縦書き・手書き） 1ページ 12,000円～",
-        "除籍謄本 7,000円～",
-        "住民票 6,000円～",
-        "運転免許証　表のみ4,000円　両面6,000円",
-        "学生証　表のみ4,000円",
-        "預金通帳　見開きページ（口座番号や口座名義人などの記載のあるページ） 5,000円",
-        "預金通帳　取引明細ページ 1ページ 5,000円",
-        "残高証明書 5,000円",
-        "卒業証明書 5,000円",
-        "成績証明書 9,000円～",
-        "婚姻要件具備証明書 7,000円",
-        "婚姻/離婚/出生 受理証明書 5,000円",
-        "出生届/出生証明書 5,000円",
-        "死亡届 7,000円",
-        "死亡診断書/検案書 9,000円～",
-        "源泉徴収票 1枚6,000円",
-        "納税証明書 6,000円～",
-        "確定申告書 1枚10,000円",
-        "公共料金の請求書や明細書 6,000円～8,000円",
-        "在職証明書 5,000円",
-        "雇用契約書 1枚 8,000円",
-        "会社の登記簿・履歴事項証明 10,000円～",
-        "不動産登記簿 1ページ 8,000円",
-        "会社定款 1ページ 8,000円",
-        "翻訳証明書/行政書士証明書 3,000円",
-      ],
-    },
-    {
-      type: "p",
-      text: "※上記以外の文書の翻訳も承ります。",
-    },
-    {
-      type: "note",
-      text: "※全て税別料金です。",
-    },
-    {
-      type: "note",
-      text: "ファミリー割引がございます。具体的な金額についてはお問い合わせください。",
-    },
-
-    {
-      type: "h2",
-      text: "外国文認証・アポスティーユ取得の代行サービス　15,000円（税別）",
-    },
   ],
 };

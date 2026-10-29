@@ -469,5 +469,19 @@ export const fees = {
         { labelEn: "Proxy collection of documents", labelJa: "書類の代理収集", fee: "¥3,000 per document" },
       ],
     },
+    {
+      titleEn: "Translation & Certification",
+      titleJa: "翻訳・認証",
+      downloadHref: "/translation-fees.pdf",
+      downloadLabelEn: "Download the detailed translation fee list (PDF)",
+      downloadLabelJa: "翻訳・認証の詳細料金表をPDFでダウンロード",
+      rows: [
+        {
+          labelEn: "Foreign-document certification and Apostille agency service",
+          labelJa: "外国文認証・アポスティーユ取得の代行サービス",
+          fee: "¥15,000 (before tax)",
+        },
+      ],
+    },
   ],
 } as const;

@@ -97,6 +97,17 @@ export default async function FeesPage({ params }: Props) {
               </tbody>
             </table>
           </div>
+          {"downloadHref" in section && section.downloadHref ? (
+            <p className="mt-5">
+              <a
+                href={section.downloadHref}
+                download
+                className="font-logo text-sm tracking-wide text-rose-deep underline decoration-rose/40 underline-offset-4 transition hover:decoration-rose"
+              >
+                → {locale === "ja" ? section.downloadLabelJa : section.downloadLabelEn}
+              </a>
+            </p>
+          ) : null}
         </section>
       ))}
 
