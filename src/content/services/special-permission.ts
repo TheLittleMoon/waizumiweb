@@ -138,11 +138,6 @@ export const specialPermission: ServiceDetail = {
   ],
   blocksJa: [
     {
-      type: "lead",
-      text: "オーバーステイの時は在留特別許可",
-    },
-
-    {
       type: "h2",
       text: "「在留特別許可」とは",
     },

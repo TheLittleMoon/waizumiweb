@@ -242,8 +242,8 @@ export const services = [
   },
   {
     slug: "specified-skilled-worker",
-    titleEn: "Specified Skilled Worker No. 1",
-    titleJa: "特定技能1号",
+    titleEn: "Specified Skilled Worker",
+    titleJa: "特定技能",
     blurbEn: "From hiring consultation through status-of-residence application.",
     blurbJa: "特定技能外国人の雇用を申請までサポートする",
   },
@@ -391,8 +391,8 @@ export const fees = {
       ],
     },
     {
-      titleEn: "Specified Skilled Worker (No. 1 and No. 2)",
-      titleJa: "特定技能1号（※2号も同一料金）",
+      titleEn: "Specified Skilled Worker",
+      titleJa: "特定技能",
       rows: [
         { labelEn: "Certificate of Eligibility (invite from overseas)", labelJa: "在留資格認定証明書交付申請（海外から外国人を招へいする）", fee: "¥100,000 (construction: ¥200,000)" },
         { labelEn: "Change of status", labelJa: "在留資格変更許可申請（現在とは異なるビザに変更する）", fee: "¥100,000 (construction: ¥200,000)" },

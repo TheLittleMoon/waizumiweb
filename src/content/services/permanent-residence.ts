@@ -22,11 +22,6 @@ export const permanentResidence: ServiceDetail = {
   ],
   blocks: [
     {
-      type: "lead",
-      text: "If you want to live in Japan long term: permanent residence and long-term residence.",
-    },
-
-    {
       type: "h2",
       text: "What is permanent residence?",
     },
@@ -45,10 +40,11 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "ol",
+      marker: "circled",
       items: [
         "Good conduct (good-conduct requirement)",
         "Having assets or skills sufficient to make an independent living (independent-livelihood requirement)",
-        "Recognition by the Minister of Justice that permanent residence conforms to the interests of Japan (national-interest requirement)",
+        "That the person’s permanent residence conforms to the interests of Japan (national-interest requirement)",
       ],
     },
     {
@@ -57,19 +53,11 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "note",
-      text: "Persons recognized as refugees are not required to meet requirement ② above.",
+      text: "Persons recognized as refugees or as persons eligible for complementary protection are not required to meet requirement ② above.",
     },
     {
       type: "note",
-      text: "Under the national-interest requirement, applicants are generally expected to hold the longest period of stay available for their current status. For applications filed by 31 March 2027, a 3-year period is treated as the longest period. After 1 April 2027, this treatment remains only for the limited transitional cases described in the official guideline. Confirm the latest guideline before applying.",
-    },
-    {
-      type: "note",
-      text: "The independent-livelihood review considers household income, household size, current and expected future income, assets, and skills. In principle, the household income is considered against the average income level for Japanese households of the same size.",
-    },
-    {
-      type: "note",
-      text: "The national-interest review also considers whether the applicant has properly fulfilled public and immigration-law obligations, including tax, pension, health-insurance, address-notification, and residence-card obligations, and has not engaged in activities outside the permitted status.",
+      text: "Permanent residence applications are comprehensively reviewed based on residence status, livelihood, fulfillment of public obligations, and other factors. If you are unsure whether you can apply for permanent residence or when to apply, please feel free to consult our office. We will advise on the necessary preparations and application timing according to your circumstances.",
     },
     {
       type: "link",
@@ -214,11 +202,6 @@ export const permanentResidence: ServiceDetail = {
   ],
   blocksJa: [
     {
-      type: "lead",
-      text: "日本で生活するなら永住ビザ・定住ビザ",
-    },
-
-    {
       type: "h2",
       text: "永住ビザとは",
     },
@@ -241,10 +224,11 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "ol",
+      marker: "circled",
       items: [
         "素行が善良であること（素行善良要件）",
         "独立の生計を営むに足りる資産又は技能を有すること（独立生計要件）",
-        "法務大臣が日本の利益に合致すると認めたこと（国益要件）",
+        "その者の永住が日本国の利益に合すること（国益要件）",
       ],
     },
     {
@@ -253,19 +237,11 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "note",
-      text: "「難民認定を受けた者」は上記②の要件は必要とされていません。",
+      text: "「難民の認定又は補完的保護対象者の認定を受けている者」は上記②の要件は必要とされていません。",
     },
     {
       type: "note",
-      text: "国益要件では、原則として現に有する在留資格について定められた最長の在留期間をもって在留していることが求められます。令和9年（2027年）3月31日までの申請では、在留期間「3年」を最長の在留期間として扱います。令和9年（2027年）4月1日以降は、公式ガイドラインに記載された限定的な経過措置の場合に限り、この取扱いが残ります。申請前に最新のガイドラインをご確認ください。",
-    },
-    {
-      type: "note",
-      text: "独立生計要件では、世帯人数、現在および将来に見込まれる収入、資産、技能などが考慮されます。原則として、世帯年収が世帯人数に応じた日本人世帯の平均収入を上回る水準に継続して達しているかが考慮されます。",
-    },
-    {
-      type: "note",
-      text: "国益要件では、納税、公的年金・公的医療保険料、住居地の届出、在留カードの再交付・携帯・提示など、法令上の公的義務を適正に履行しているか、また許可された活動以外の活動をしていないかも考慮されます。",
+      text: "永住許可では、在留状況や生活基盤、公的義務の履行状況などが総合的に審査されます。「自分は永住申請ができるのか」「いつ申請すればよいのか」とお悩みの方は、当事務所へお気軽にご相談ください。お客様の状況に応じて、必要な準備や申請時期をご案内いたします。",
     },
     {
       type: "link",
@@ -401,11 +377,7 @@ export const permanentResidence: ServiceDetail = {
     },
     {
       type: "p",
-      text: "日本人の配偶者と離婚・死別したけれど、このまま日本に滞在したい方",
-    },
-    {
-      type: "p",
-      text: "日本に在留できる可能性があります。",
+      text: "日本人の配偶者と離婚・死別したけれど、このまま日本に滞在したい方は、日本に在留できる可能性があります。",
     },
     {
       type: "p",

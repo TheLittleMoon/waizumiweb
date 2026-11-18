@@ -52,11 +52,17 @@ function BlockList({
               </p>
             );
           case "h3":
-            return (
-              <h3 key={i} className="font-logo pt-1 text-lg text-ink">
+            {
+              const isNumberedHeading = /^[①②③④⑤⑥⑦⑧⑨]/.test(block.text);
+              return (
+              <h3
+                key={i}
+                className={isNumberedHeading ? "pt-1 text-base font-semibold text-ink" : "font-logo pt-1 text-lg text-ink"}
+              >
                 {block.text}
               </h3>
-            );
+              );
+            }
           case "p":
             return <p key={i}>{block.text}</p>;
           case "note":
@@ -116,9 +122,12 @@ function BlockList({
             );
           case "ol":
             return (
-              <ol key={i} className="list-decimal space-y-2 pl-5">
-                {block.items.map((item) => (
-                  <li key={item}>{item}</li>
+              <ol key={i} className={`${block.marker === "circled" ? "list-none pl-0 text-base text-ink" : "list-decimal pl-5"} ${block.marker === "circled" ? "space-y-3" : "space-y-2"}`}>
+                {block.items.map((item, itemIndex) => (
+                  <li key={item}>
+                    {block.marker === "circled" ? ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"][itemIndex] ?? `${itemIndex + 1}.` : null}
+                    {item}
+                  </li>
                 ))}
               </ol>
             );
