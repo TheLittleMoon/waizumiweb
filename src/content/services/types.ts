@@ -4,7 +4,7 @@ export type ServiceBlock =
   | { type: "p"; text: string }
   | { type: "lead"; text: string }
   | { type: "ul"; items: string[] }
-  | { type: "ol"; items: string[]; marker?: "circled" }
+  | { type: "ol"; items: string[]; marker?: "circled"; markerSpace?: boolean }
   | {
       type: "link";
       label: string;

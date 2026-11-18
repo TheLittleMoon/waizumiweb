@@ -41,6 +41,7 @@ export const permanentResidence: ServiceDetail = {
     {
       type: "ol",
       marker: "circled",
+      markerSpace: true,
       items: [
         "Good conduct (good-conduct requirement)",
         "Having assets or skills sufficient to make an independent living (independent-livelihood requirement)",

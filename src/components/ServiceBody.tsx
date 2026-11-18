@@ -125,7 +125,7 @@ function BlockList({
               <ol key={i} className={`${block.marker === "circled" ? "list-none pl-0 text-base text-ink" : "list-decimal pl-5"} ${block.marker === "circled" ? "space-y-3" : "space-y-2"}`}>
                 {block.items.map((item, itemIndex) => (
                   <li key={item}>
-                    {block.marker === "circled" ? ["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"][itemIndex] ?? `${itemIndex + 1}.` : null}
+                    {block.marker === "circled" ? `${["①", "②", "③", "④", "⑤", "⑥", "⑦", "⑧", "⑨"][itemIndex] ?? `${itemIndex + 1}.`}${block.markerSpace ? " " : ""}` : null}
                     {item}
                   </li>
                 ))}
